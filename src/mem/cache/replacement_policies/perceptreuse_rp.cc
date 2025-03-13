@@ -7,6 +7,18 @@ namespace replacement_policy
 {
 
 
+PerceptReuse::PRReplData::PRReplData() :
+    signatures(NULL), prediction(-1), used(false) {
+
+}
+
+PerceptReuse::PerceptReuse(const PRParams &p) :
+    BRRIP(p), weight_size(p.weight_size),
+    weight_table_size(p.weight_table_size),
+    weight_init(p.weight_init), TAU_REPLACE(p.TAU_REPLACE),
+    TAU_BYPASS(p.TAU_BYPASS) {
+    //TODO: initialize sampler set
+}
 
 
 void
@@ -31,6 +43,11 @@ PerceptReuse::touch(const std::shared_ptr<ReplacementData>& replacement_data,
     } else {
         casted_replacement_data->rrpv = 0;
     }
+}
+
+void touch(const std::shared_ptr<ReplacementData>& replacement_data)
+    const override {
+    panic("Cant train percept's predictor without access information.");
 }
 
 bool PerceptReuse::inSamplerSet() const {

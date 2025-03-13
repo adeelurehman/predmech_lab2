@@ -20,7 +20,7 @@
 
 namespace gem5 {
 
-// struct PRParams; //TODO: figure out how to pass params properly
+struct PRParams; //TODO: figure out how to pass params properly
 
 namespace replacement_policy {
 
@@ -35,15 +35,17 @@ class PerceptReuse : public BRRIP
     // and initialization stuff up by half of size
     // TODO: figure out sampler sets
 
-        unsigned signature_counter_size = 6; // TODO: get from params
-        int sign_weight_table_size = 256; //TODO: same
-        int weight_init = 0; // TODO: same
+        unsigned weight_size; // TODO: get from params
+        int weight_table_size ; //TODO: same
+        int weight_init; // TODO: same
         int TAU_REPLACE; // TODO: same
         int TAU_BYPASS; // TODO: same
 
         // is this even legal
-        typedef GenericSatCounter<uint16_t>::
-            GenericSatCounter(signature_counter_size, weight_init) PRSatCount;
+        // typedef GenericSatCounter<uint16_t>::
+        //     GenericSatCounter(signature_counter_size, weight_init)
+        // PRSatCount;
+        typedef SatCounter8(signature_counter_size, weight_init) PRSatCount;
         typedef std::array<uint32_t, 6> Signs;
 
         // TODO: get core count from params and make these per core
@@ -54,13 +56,13 @@ class PerceptReuse : public BRRIP
         { // CONTAINS PER CACHE LINE METADATA (I THINK)
             Signs signatures;
             int64_t prediction;
-            bool used = false;
-
-
-
+            bool used;
         }
 
     public:
+        PerceptReuse(const PRParams &p);
+        ~PerceptReuse() = default;
+
 
         void touch(const std::shared_ptr<ReplacementData>& replacement_data,
             const PacketPtr pkt) override;
