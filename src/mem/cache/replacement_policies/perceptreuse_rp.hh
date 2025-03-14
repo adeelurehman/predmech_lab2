@@ -59,13 +59,24 @@ class PerceptReuse : public BRRIP
         { // CONTAINS PER CACHE LINE METADATA (I THINK) (yes it does)
             Signs signatures;
             int64_t prediction;
+            bool s_valid;
             bool used;
             Addr address;
+
+            PRReplData(const int num_bits)
+                : BRRIPReplData(num_bits),
+                prediction(-1),
+                s_valid(false),
+                used(false),
+                address(0)
+            {
+                signatures = {};
+            }
         };
 
         // bool inSamplerSet() const;
         void UpdateHistory(const PacketPtr pkr);
-        Signs getSignatures(const PacketPtr pkt) const;
+        Signs getSignatures(const PacketPtr pkt, bool &s_valid) const;
         int64_t getPrediction(Signs signs);
         void trainWeights(Signs signs, bool polarity);
 
@@ -74,6 +85,7 @@ class PerceptReuse : public BRRIP
         PerceptReuse(const Params &p);
         ~PerceptReuse() = default;
 
+        void invalidate(const std::shared_ptr<ReplacementData>& replacement_data) override;
 
         void touch(const std::shared_ptr<ReplacementData>& replacement_data,
             const PacketPtr pkt) override;
@@ -89,6 +101,8 @@ class PerceptReuse : public BRRIP
 
         ReplaceableEntry* getVictim(const ReplacementCandidates& candidates, const PacketPtr pkt) override;
         ReplaceableEntry* getVictim(const ReplacementCandidates& candidates) const override;
+
+        std::shared_ptr<ReplacementData> instantiateEntry() override;
 };
 
 

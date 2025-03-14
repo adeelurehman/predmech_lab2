@@ -31,6 +31,15 @@ PerceptReuse::PerceptReuse(const Params &p) :
     }
 }
 
+void
+PerceptReuse::invalidate(const std::shared_ptr<ReplacementData>& replacement_data)
+{
+    std::shared_ptr<PRReplData> casted_replacement_data =
+        std::static_pointer_cast<PRReplData>(replacement_data);
+
+    // Invalidate entry
+    casted_replacement_data->valid = false;
+}
 
 void
 PerceptReuse::touch(const std::shared_ptr<ReplacementData>& replacement_data,
@@ -40,7 +49,8 @@ PerceptReuse::touch(const std::shared_ptr<ReplacementData>& replacement_data,
 
     // Get signatures
     UpdateHistory(pkt);
-    Signs signatures = getSignatures(pkt);
+    bool s_valid = false;
+    Signs signatures = getSignatures(pkt, s_valid);
 
     // When a hit happens and if the hit was in sampler set then
     // positively train its' weights
@@ -49,14 +59,16 @@ PerceptReuse::touch(const std::shared_ptr<ReplacementData>& replacement_data,
     // }
     casted_replacement_data->used = true;
     if (ABS(casted_replacement_data->prediction) < theta || casted_replacement_data->prediction >= TAU_BYPASS) {
-        trainWeights(signatures, true);
+        if (s_valid) {
+            trainWeights(signatures, true);
+        }
     }
 
     // This was a hit; update replacement data accordingly
     // BRRIP::touch(replacement_data); either resets to insert val or
     // decremenets rrpv based on hit priority, we just want to set
     // to 0 or max depending on tau_replace
-    if (getPrediction(signatures) >= TAU_REPLACE) {
+    if (s_valid && getPrediction(signatures) >= TAU_REPLACE) {
         casted_replacement_data->rrpv.saturate();
     } else {
         casted_replacement_data->rrpv.reset(); // = 0;
@@ -76,16 +88,18 @@ PerceptReuse::reset(const std::shared_ptr<ReplacementData>& replacement_data, co
         std::static_pointer_cast<PRReplData>(replacement_data);
 
     // Get signatures, do not update history
-    Signs signatures = getSignatures(pkt);
+    bool s_valid = false;
+    Signs signatures = getSignatures(pkt, s_valid);
 
     // Sampler
     casted_replacement_data->used = false;
     casted_replacement_data->address = pkt->getAddr();
     casted_replacement_data->signatures = signatures;
-    casted_replacement_data->prediction = getPrediction(signatures);
+    casted_replacement_data->s_valid = s_valid;
+    casted_replacement_data->prediction = s_valid ? getPrediction(signatures) : 0;
 
     // Reset RRPV on insertion
-    int prediction = getPrediction(signatures);
+    int prediction = s_valid ? getPrediction(signatures) : 0;
     casted_replacement_data->rrpv.saturate();
     casted_replacement_data->rrpv--;
     if (prediction >= TAU_REPLACE) {
@@ -122,9 +136,12 @@ PerceptReuse::getVictim(const ReplacementCandidates& candidates, const PacketPtr
 {
     UpdateHistory(pkt);
     // TODO: Check for bypass
-    Signs signatures = getSignatures(pkt);
-    if (getPrediction(signatures) >= TAU_BYPASS && !pkt->cmd.isWrite()) {
-        return nullptr;
+    bool s_valid = false;
+    Signs signatures = getSignatures(pkt, s_valid);
+    if (!s_valid) {
+        if (getPrediction(signatures) >= TAU_BYPASS && !pkt->cmd.isWrite()) {
+            return nullptr;
+        }
     }
 
     ReplaceableEntry* victim = BRRIP::getVictim(candidates);
@@ -137,7 +154,7 @@ PerceptReuse::getVictim(const ReplacementCandidates& candidates, const PacketPtr
         bool predict_rereferenced = casted_replacement_data->prediction < TAU_BYPASS;
         bool correct = (predict_rereferenced && casted_replacement_data->used) || (!predict_rereferenced && !casted_replacement_data->used);
   
-        if (!correct || train_threshold) {
+        if ((!correct || train_threshold) && casted_replacement_data->s_valid) {
           // Train up (towards +infinity), we want to evict/bypass these
           trainWeights(signatures, false);
         }
@@ -167,7 +184,7 @@ void PerceptReuse::UpdateHistory(const PacketPtr pkt) {
     }
 }
 
-PerceptReuse::Signs PerceptReuse::getSignatures(const PacketPtr pkt) const {
+PerceptReuse::Signs PerceptReuse::getSignatures(const PacketPtr pkt, bool &s_valid) const {
     PerceptReuse::Signs signs;
 
     Addr addr = pkt->getAddr();
@@ -187,7 +204,6 @@ PerceptReuse::Signs PerceptReuse::getSignatures(const PacketPtr pkt) const {
         };
     } else {
         signs = {};
-        panic("Can't select signature without PC");
     }
     return signs;
 }
@@ -213,6 +229,12 @@ void PerceptReuse::trainWeights(Signs signs, bool polarity) {
         }
     }
     return;
+}
+
+std::shared_ptr<ReplacementData>
+PerceptReuse::instantiateEntry()
+{
+    return std::shared_ptr<ReplacementData>(new PRReplData(numRRPVBits));
 }
 
 } //ns replacement_policy
