@@ -3,6 +3,8 @@
 #include "base/logging.hh"
 #include "params/PerceptReuseRP.hh"
 
+#define ABS(x) (x >= 0) ? x : 0 - x
+
 namespace gem5
 {
 
@@ -18,14 +20,14 @@ namespace replacement_policy
 PerceptReuse::PerceptReuse(const Params &p) :
     BRRIP(p), weight_size(p.weight_size),
     weight_table_size(p.weight_table_size),
-    weight_init(p.weight_init), TAU_REPLACE(p.TAU_REPLACE),
+    TAU_REPLACE(p.TAU_REPLACE),
     TAU_BYPASS(p.TAU_BYPASS), theta(p.theta) {
     //TODO: initialize sampler set
 
     // PRCPT_WT.resize(p.system->numContexts()); for multicore
     
     for (auto& vec : PRCPT_WT) {
-        vec = std::vector<SatCounter8>(weight_table_size, SatCounter8(weight_size));
+        vec = std::vector<SatCounter8>(weight_table_size, SatCounter8(weight_size, 1<<(weight_size-1)));
     }
 }
 
@@ -42,10 +44,13 @@ PerceptReuse::touch(const std::shared_ptr<ReplacementData>& replacement_data,
 
     // When a hit happens and if the hit was in sampler set then
     // positively train its' weights
-    if (inSamplerSet()) {
+    // if (inSamplerSet()) {
+    //     trainWeights(signatures, true);
+    // }
+    casted_replacement_data->used = true;
+    if (ABS(casted_replacement_data->prediction) < theta || casted_replacement_data->prediction >= TAU_BYPASS) {
         trainWeights(signatures, true);
     }
-    casted_replacement_data->used = true;
 
     // This was a hit; update replacement data accordingly
     // BRRIP::touch(replacement_data); either resets to insert val or
@@ -67,11 +72,17 @@ PerceptReuse::touch(const std::shared_ptr<ReplacementData>& replacement_data)
 void
 PerceptReuse::reset(const std::shared_ptr<ReplacementData>& replacement_data, const PacketPtr pkt)
 {
-    std::shared_ptr<BRRIPReplData> casted_replacement_data =
-        std::static_pointer_cast<BRRIPReplData>(replacement_data);
+    std::shared_ptr<PRReplData> casted_replacement_data =
+        std::static_pointer_cast<PRReplData>(replacement_data);
 
     // Get signatures, do not update history
     Signs signatures = getSignatures(pkt);
+
+    // Sampler
+    casted_replacement_data->used = false;
+    casted_replacement_data->address = pkt->getAddr();
+    casted_replacement_data->signatures = signatures;
+    casted_replacement_data->prediction = getPrediction(signatures);
 
     // Reset RRPV on insertion
     int prediction = getPrediction(signatures);
@@ -116,7 +127,23 @@ PerceptReuse::getVictim(const ReplacementCandidates& candidates, const PacketPtr
         return nullptr;
     }
 
-    return BRRIP::getVictim(candidates);
+    ReplaceableEntry* victim = BRRIP::getVictim(candidates);
+    std::shared_ptr<PRReplData> casted_replacement_data =
+        std::static_pointer_cast<PRReplData>(victim->replacementData);
+
+    // Train on eviction
+    if (casted_replacement_data->valid) {
+        bool train_threshold = ABS(casted_replacement_data->prediction) < theta;
+        bool predict_rereferenced = casted_replacement_data->prediction < TAU_BYPASS;
+        bool correct = (predict_rereferenced && casted_replacement_data->used) || (!predict_rereferenced && !casted_replacement_data->used);
+  
+        if (!correct || train_threshold) {
+          // Train up (towards +infinity), we want to evict/bypass these
+          trainWeights(signatures, false);
+        }
+    }
+
+    return victim;
 }
 
 ReplaceableEntry*
@@ -125,11 +152,11 @@ PerceptReuse::getVictim(const ReplacementCandidates& candidates) const {
     return nullptr;
 }
 
-bool PerceptReuse::inSamplerSet() const {
-    //TODO: do this (wait how the fuck do you get set/way (in ReplaceableEntry
-    // but no access to it?))
-    return false;
-}
+// bool PerceptReuse::inSamplerSet() const {
+//     //TODO: do this (wait how the fuck do you get set/way (in ReplaceableEntry
+//     // but no access to it?))
+//     return false;
+// }
 
 void PerceptReuse::UpdateHistory(const PacketPtr pkt) {
     if (pkt->req->hasPC()) {
@@ -170,6 +197,7 @@ int64_t PerceptReuse::getPrediction(Signs signs) {
     int64_t pred = 0;
     for (int i = 0; i < 6; ++i) {
         pred += PRCPT_WT[i][signs[i]];
+        pred -= (1 << (weight_size-1));
         // pred += PRCPT_WT[core_id][i][signs[i]]; multicore
     }
     return pred;

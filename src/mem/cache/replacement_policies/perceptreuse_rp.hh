@@ -20,7 +20,6 @@
 
 namespace gem5 {
 
-//TODO: figure out how to pass params properly
 struct PerceptReuseRPParams; 
 
 namespace replacement_policy {
@@ -36,11 +35,11 @@ class PerceptReuse : public BRRIP
     // and initialization stuff up by half of size
     // TODO: figure out sampler sets
 
-        unsigned weight_size; // TODO: get from params
-        int weight_table_size ; //TODO: same
-        int weight_init; // TODO: same
-        int TAU_REPLACE; // TODO: same
-        int TAU_BYPASS; // TODO: same
+        unsigned weight_size; 
+        int weight_table_size;
+        int weight_init; 
+        int TAU_REPLACE;
+        int TAU_BYPASS;
         int theta;
 
         Addr PCi[4] = {0,0,0,0};
@@ -52,22 +51,19 @@ class PerceptReuse : public BRRIP
         // typedef SatCounter8(signature_counter_size, weight_init) PRSatCount;
         typedef std::array<Addr, 6> Signs;
 
-        // TODO: get core count from params and make these per core
         std::array<std::vector<SatCounter8>, 6> PRCPT_WT;
         // std::array<std::array<SatCounter8(6, 0), 256>, 6> PRCPT_WT;
         // std::vector<std::array<std::array<PRSatCount, sign_weight_table_size>, 6>> PRCPT_WT; for multicore
 
-        // std::array<Addr, 4> PCi;
-
         struct PRReplData : public BRRIPReplData
         { // CONTAINS PER CACHE LINE METADATA (I THINK) (yes it does)
             Signs signatures;
-            // int64_t prediction;
+            int64_t prediction;
             bool used;
             Addr address;
         };
 
-        bool inSamplerSet() const;
+        // bool inSamplerSet() const;
         void UpdateHistory(const PacketPtr pkr);
         Signs getSignatures(const PacketPtr pkt) const;
         int64_t getPrediction(Signs signs);

@@ -183,7 +183,6 @@ class PerceptReuseRP(BRRIPRP):
 
     weight_size = Param.Unsigned(6, "Number of bits in weight")
     weight_table_size = Param.Unsigned(256, "weight_table_size")
-    weight_init = Param.Unsigned(0, "weight_init")
     TAU_REPLACE = Param.Unsigned(124, "TAU_REPLACE")
     TAU_BYPASS = Param.Unsigned(3, "TAU_BYPASS")
     theta = Param.Unsigned(68, "Training threshold")
