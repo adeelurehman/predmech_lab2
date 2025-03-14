@@ -1,5 +1,5 @@
-#spec=(429.mcf 450.soplex 471.omnetpp 473.astar 482.sphinx3 483.xalancbmk)
-spec=(473.astar)
+spec=(429.mcf 450.soplex 471.omnetpp 473.astar 482.sphinx3 483.xalancbmk)
+#spec=(473.astar)
 time_value=$(date +%H%M)
 root=${PWD}
 mkdir "$root/$time_value"
