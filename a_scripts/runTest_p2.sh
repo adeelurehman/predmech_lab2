@@ -19,28 +19,28 @@ for benchmark in "${spec[@]}"; do
         --redirect &
 done
 
-# mkdir "$root/$time_value/bfs"
-# $root/build/X86/gem5.opt \
-#     -- se_custom_binary_periodic.py \
-#     --input-bin "$root/spec06/bfs" \
-#     --input-args "-r 1 -f /scratch/cluster/speedway/cs395t/hw2/part2/gap/g22.el" \
-#     --init-ff-interval 10000 \
-#     --ff-interval 10000 \
-#     --warmup-interval 25 \
-#     --roi-interval 50 \
-#     --num-rois 3 \
-#     > "$root/$time_value/bfs.stdout" 2>&1 &
+ mkdir "$root/$time_value/bfs"
+ $root/build/X86/gem5.opt \
+     -- "$root/gem5-configs-395t/se_custom_binary_periodic.py" \
+     --input-bin "$root/spec06/bfs" \
+     --input-args "-r 1 -f /scratch/cluster/speedway/cs395t/hw2/part2/gap/g22.el" \
+     --init-ff-interval 10000 \
+     --ff-interval 10000 \
+     --warmup-interval 25 \
+     --roi-interval 50 \
+     --num-rois 3 \
+     > "$root/$time_value/bfs.stdout" 2>&1 &
 
-# mkdir "$root/$time_value/cc"
-# $root/build/X86/gem5.opt \
-#     -- se_custom_binary_periodic.py \
-#     --input-bin "$root/spec06/cc" \
-#     --input-args "-r 1 -f /scratch/cluster/speedway/cs395t/hw2/part2/gap/g22.el" \
-#     --init-ff-interval 10000 \
-#     --ff-interval 10000 \
-#     --warmup-interval 25 \
-#     --roi-interval 50 \
-#     --num-rois 3 \
-#     > "$root/$time_value/cc.stdout" 2>&1 &
+ mkdir "$root/$time_value/cc"
+ $root/build/X86/gem5.opt \
+     -- "$root/gem5-configs-395t/se_custom_binary_periodic.py" \
+     --input-bin "$root/spec06/cc" \
+     --input-args "-r 1 -f /scratch/cluster/speedway/cs395t/hw2/part2/gap/g22.el" \
+     --init-ff-interval 10000 \
+     --ff-interval 10000 \
+     --warmup-interval 25 \
+     --roi-interval 50 \
+     --num-rois 3 \
+     > "$root/$time_value/cc.stdout" 2>&1 &
 
 cd ..
