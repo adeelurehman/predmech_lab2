@@ -1,0 +1,608 @@
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 24.1.0.2
+gem5 compiled Mar 14 2025 03:45:19
+gem5 started Mar 14 2025 05:34:37
+gem5 executing on pedagogical-2, pid 3806750
+command line: /tmp/roym/predmech_lab2/gem5-configs-395t/../build/X86/gem5.opt --outdir=/tmp/roym/predmech_lab2/0534/482.sphinx3/482.sphinx3 -re -- /tmp/roym/predmech_lab2/gem5-configs-395t/se_custom_binary_periodic.py --input-bin=/tmp/roym/predmech_lab2/spec06/482.sphinx3/sphinx_livepretend_base.amd64-m64-gcc42-nn '--input-args=/tmp/roym/predmech_lab2/spec06/482.sphinx3/ctlfile . /tmp/roym/predmech_lab2/spec06/482.sphinx3/args.an4' --ff-interval=10000 --warmup-interval=25 --roi-interval=50 --init-ff-interval=10000 --num-rois=3
+
+info: Standard input is not a terminal, disabling listeners.
+Creating SkylakeCPU object: bpred=SkylakeTAGE
+Creating X86 Switchable Processor: num_cores=1, start_core_type=CPUTypes.KVM, switch_core_type=CPUTypes.TIMING
+Creating ThreeLevelClassicHierarchy
+***Fast-forward interval: 10,000,000,000 instructions
+***Warmup interval      : 25,000,000 instructions
+***ROI interval         : 50,000,000 instructions
+***Initial fast-forward : 10,000,000,000 instructions
+***Maximum ROIs         : 3
+***Continue simulation  : False
+***Beginning simulation!
+Creating L1DCache object: size=32768, assoc=8, pref=StridePrefetcher, repl=LRURP
+Creating L1ICache object: size=32768, assoc=8, pref=<class 'm5.params.NullSimObject'>, repl=LRURP
+Creating L2Cache object: size=1048576, assoc=16, pref=<class 'm5.params.NullSimObject'>, repl=LRURP
+Creating MMUCache object
+Creating MMUCache object
+Creating LLCache object: size=8388608, assoc=16, pref=<class 'm5.params.NullSimObject'>, repl=LRURP
+Global frequency set at 1000000000000 ticks per second
+INFO: spec_main_live_pretend.c(120): Processing 24 beamsets
+INFO: cmd_ln.c(276): Parsing command line:
+INFO: kbcore.c(95): Initializing core models:
+INFO: logs3.c(99): Initializing logbase: 1.000300e+00 (add table: 1)
+INFO: logs3.c(161): Log-Add table size = 29350
+INFO: feat.c(642): Initializing feature stream to type: '1s_c_d_dd', CMN='current', VARNORM='no', AGC='none'
+INFO: mdef.c(594): Reading model definition: model/hmm/hub4/hub4opensrc.6000.mdef
+INFO: mdef.c(771): 48 CI-phone, 133500 CD-phone, 3 emitstate/phone, 144 CI-sen, 6144 Sen, 32639 Sen-Seq
+INFO: dict.c(358): Reading main dictionary: model/lm/an4/an4.dict
+INFO: dict.c(361): 130 words read
+INFO: dict.c(366): Reading filler dictionary: model/lm/an4/filler.dict
+INFO: dict.c(369): 3 words read
+INFO: lm.c(739): LM read('model/lm/an4/an4.ug.lm.DMP', lw= 9.50, wip= -1188, uw= 0.70)
+INFO: lm.c(553):      107 ug
+INFO: lm.c(583):        1 bigrams [on disk]
+INFO: lm.c(613):        2 bigram prob entries
+INFO: lm.c(696):      107 word strings
+INFO: wid.c(178): 6 LM words not in dictionary; ignored
+INFO: cont_mgau.c(96): Reading mixture gaussian file 'model/hmm/hub4/means'
+INFO: cont_mgau.c(248): 6144 mixture Gaussians, 8 components, 1 streams, veclen 39
+INFO: cont_mgau.c(96): Reading mixture gaussian file 'model/hmm/hub4/variances'
+INFO: cont_mgau.c(248): 6144 mixture Gaussians, 8 components, 1 streams, veclen 39
+INFO: cont_mgau.c(269): Reading mixture weights file 'model/hmm/hub4/mixture_weights'
+INFO: cont_mgau.c(362): Read 6144 x 8 mixture weights
+INFO: cont_mgau.c(378): Removing uninitialized Gaussian densities
+ 6 7 8
+INFO: cont_mgau.c(408): 24 densities removed (3 mixtures removed entirely)
+INFO: cont_mgau.c(416): Applying variance floor
+INFO: cont_mgau.c(428): 0 variance values floored
+INFO: cont_mgau.c(474): Precomputing Mahalanobis distance invariants
+INFO: subvq.c(199): Loading Mixture Gaussian sub-VQ file 'model/hmm/hub4/8gau.6000sen.quant' (vq_eval: 3)
+INFO: subvq.c(259): Original #codebooks(states)/codewords: 6144 x 8
+INFO: subvq.c(260): Subvectors: 3, VQsize: 4096
+INFO: subvq.c(262): SV 0 feature dims(13):   0  1  2  3  4  5  6  7  8  9 10 11 12
+INFO: subvq.c(262): SV 1 feature dims(13):  13 14 15 16 17 18 19 20 21 22 23 24 25
+INFO: subvq.c(262): SV 2 feature dims(13):  26 27 28 29 30 31 32 33 34 35 36 37 38
+INFO: subvq.c(271): Reading subvq 0
+INFO: subvq.c(273): Reading codebook
+INFO: subvq.c(293): Reading map
+INFO: subvq.c(271): Reading subvq 1
+INFO: subvq.c(273): Reading codebook
+INFO: subvq.c(293): Reading map
+INFO: subvq.c(271): Reading subvq 2
+INFO: subvq.c(273): Reading codebook
+INFO: subvq.c(293): Reading map
+INFO: subvq.c(103): Precomputing Mahalanobis distance invariants
+INFO: tmat.c(135): Reading HMM transition probability matrices: model/hmm/hub4/transition_matrices
+INFO: tmat.c(217): Read 48 transition matrices of size 3x4
+INFO: dict2pid.c(254): Building PID tables for dictionary
+INFO: dict2pid.c(422): 873 composite states; 324 composite sseq
+INFO: kbcore.c(225): Verifying models consistency:
+INFO: kb.c(197): Building lextrees
+INFO: kb.c(243): Creating Unigram Table
+INFO: kb.c(246): Size of word table after unigram + words in class: 99
+INFO: kb.c(263): Lextrees(3), 1428 nodes(ug)
+INFO: kb.c(291): Lextrees(3), 1 nodes(filler)
+INFO: kb.c(317): Beam= -460509, PBeam= -383758, WBeam= -268630, SVQBeam= -15350
+INFO: kb.c(322): Down Sampling Ratio = 1
+INFO: kb.c(328): Conditional Down Sampling Parameter = 0
+INFO: kb.c(333): GS map would be used for Gaussian Selection? = 1
+INFO: kb.c(336): SVQ would be used as Gaussian Score ?= 0
+INFO: kb.c(339): CI phone beam to prune the number of parent CI phones in CI-base GMM Selection = 939524096
+INFO: kb.c(341): Virtually no CI phone beam is applied now. (ci_pbeam>1000000)
+INFO: kb.c(345): Word-end pruning beam: 939524096
+INFO: kb.c(348): Phoneme look-ahead window size = 1
+INFO: kb.c(353): Phoneme look-ahead beam = -939524096
+INFO: vithist.c(77): Initializing Viterbi-history module
+32000 samples in ./an391-mjwl-b.raw will be decoded in blocks of 2000
+12800 samples in ./an392-mjwl-b.raw will be decoded in blocks of 2000
+40000 samples in ./an393-mjwl-b.raw will be decoded in blocks of 2000
+60800 samples in ./an394-mjwl-b.raw will be decoded in blocks of 2000
+30400 samples in ./an395-mjwl-b.raw will be decoded in blocks of 2000
+64000 samples in ./an396-miry-b.raw will be decoded in blocks of 2000
+44800 samples in ./an397-miry-b.raw will be decoded in blocks of 2000
+60800 samples in ./an398-miry-b.raw will be decoded in blocks of 2000
+73600 samples in ./an399-miry-b.raw will be decoded in blocks of 2000
+22400 samples in ./an400-miry-b.raw will be decoded in blocks of 2000
+52800 samples in ./an401-mdms2-b.raw will be decoded in blocks of 2000
+12800 samples in ./an402-mdms2-b.raw will be decoded in blocks of 2000
+62400 samples in ./an403-mdms2-b.raw will be decoded in blocks of 2000
+48000 samples in ./an404-mdms2-b.raw will be decoded in blocks of 2000
+86400 samples in ./an405-mdms2-b.raw will be decoded in blocks of 2000
+12800 samples in ./an416-fjlp-b.raw will be decoded in blocks of 2000
+40000 samples in ./an417-fjlp-b.raw will be decoded in blocks of 2000
+35200 samples in ./an418-fjlp-b.raw will be decoded in blocks of 2000
+38400 samples in ./an419-fjlp-b.raw will be decoded in blocks of 2000
+68800 samples in ./an420-fjlp-b.raw will be decoded in blocks of 2000
+24000 samples in ./an421-menk-b.raw will be decoded in blocks of 2000
+22400 samples in ./an422-menk-b.raw will be decoded in blocks of 2000
+57600 samples in ./an423-menk-b.raw will be decoded in blocks of 2000
+64000 samples in ./an424-menk-b.raw will be decoded in blocks of 2000
+38400 samples in ./an425-menk-b.raw will be decoded in blocks of 2000
+30400 samples in ./an426-fvap-b.raw will be decoded in blocks of 2000
+51200 samples in ./an427-fvap-b.raw will be decoded in blocks of 2000
+28800 samples in ./an428-fvap-b.raw will be decoded in blocks of 2000
+59200 samples in ./an429-fvap-b.raw will be decoded in blocks of 2000
+49600 samples in ./an430-fvap-b.raw will be decoded in blocks of 2000
+59200 samples in ./an431-marh-b.raw will be decoded in blocks of 2000
+33600 samples in ./an432-marh-b.raw will be decoded in blocks of 2000
+46400 samples in ./an433-marh-b.raw will be decoded in blocks of 2000
+70400 samples in ./an434-marh-b.raw will be decoded in blocks of 2000
+28800 samples in ./an435-marh-b.raw will be decoded in blocks of 2000
+25600 samples in ./an436-mjgm-b.raw will be decoded in blocks of 2000
+36800 samples in ./an437-mjgm-b.raw will be decoded in blocks of 2000
+43200 samples in ./an438-mjgm-b.raw will be decoded in blocks of 2000
+32000 samples in ./an439-mjgm-b.raw will be decoded in blocks of 2000
+12800 samples in ./an440-mjgm-b.raw will be decoded in blocks of 2000
+56000 samples in ./an441-mmxg-b.raw will be decoded in blocks of 2000
+14400 samples in ./an442-mmxg-b.raw will be decoded in blocks of 2000
+11200 samples in ./an443-mmxg-b.raw will be decoded in blocks of 2000
+67200 samples in ./an444-mmxg-b.raw will be decoded in blocks of 2000
+46400 samples in ./an445-mmxg-b.raw will be decoded in blocks of 2000
+44800 samples in ./cen1-fjlp-b.raw will be decoded in blocks of 2000
+33600 samples in ./cen1-fvap-b.raw will be decoded in blocks of 2000
+35200 samples in ./cen1-marh-b.raw will be decoded in blocks of 2000
+70400 samples in ./cen1-mdms2-b.raw will be decoded in blocks of 2000
+49600 samples in ./cen1-menk-b.raw will be decoded in blocks of 2000
+49600 samples in ./cen1-miry-b.raw will be decoded in blocks of 2000
+28800 samples in ./cen1-mjgm-b.raw will be decoded in blocks of 2000
+35200 samples in ./cen1-mjwl-b.raw will be decoded in blocks of 2000
+49600 samples in ./cen1-mmxg-b.raw will be decoded in blocks of 2000
+38400 samples in ./cen2-fjlp-b.raw will be decoded in blocks of 2000
+36800 samples in ./cen2-fvap-b.raw will be decoded in blocks of 2000
+24000 samples in ./cen2-marh-b.raw will be decoded in blocks of 2000
+49600 samples in ./cen2-mdms2-b.raw will be decoded in blocks of 2000
+32000 samples in ./cen2-menk-b.raw will be decoded in blocks of 2000
+32000 samples in ./cen2-miry-b.raw will be decoded in blocks of 2000
+22400 samples in ./cen2-mjgm-b.raw will be decoded in blocks of 2000
+35200 samples in ./cen2-mjwl-b.raw will be decoded in blocks of 2000
+38400 samples in ./cen2-mmxg-b.raw will be decoded in blocks of 2000
+20800 samples in ./cen3-fjlp-b.raw will be decoded in blocks of 2000
+24000 samples in ./cen3-fvap-b.raw will be decoded in blocks of 2000
+25600 samples in ./cen3-marh-b.raw will be decoded in blocks of 2000
+19200 samples in ./cen3-mdms2-b.raw will be decoded in blocks of 2000
+35200 samples in ./cen3-menk-b.raw will be decoded in blocks of 2000
+28800 samples in ./cen3-miry-b.raw will be decoded in blocks of 2000
+22400 samples in ./cen3-mjgm-b.raw will be decoded in blocks of 2000
+16000 samples in ./cen3-mjwl-b.raw will be decoded in blocks of 2000
+22400 samples in ./cen3-mmxg-b.raw will be decoded in blocks of 2000
+36800 samples in ./cen4-fjlp-b.raw will be decoded in blocks of 2000
+46400 samples in ./cen4-fvap-b.raw will be decoded in blocks of 2000
+35200 samples in ./cen4-marh-b.raw will be decoded in blocks of 2000
+96000 samples in ./cen4-mdms2-b.raw will be decoded in blocks of 2000
+62400 samples in ./cen4-menk-b.raw will be decoded in blocks of 2000
+62400 samples in ./cen4-miry-b.raw will be decoded in blocks of 2000
+44800 samples in ./cen4-mjgm-b.raw will be decoded in blocks of 2000
+40000 samples in ./cen4-mjwl-b.raw will be decoded in blocks of 2000
+76800 samples in ./cen4-mmxg-b.raw will be decoded in blocks of 2000
+80000 samples in ./cen5-fjlp-b.raw will be decoded in blocks of 2000
+49600 samples in ./cen5-fvap-b.raw will be decoded in blocks of 2000
+56000 samples in ./cen5-marh-b.raw will be decoded in blocks of 2000
+86400 samples in ./cen5-mdms2-b.raw will be decoded in blocks of 2000
+68800 samples in ./cen5-menk-b.raw will be decoded in blocks of 2000
+78400 samples in ./cen5-miry-b.raw will be decoded in blocks of 2000
+56000 samples in ./cen5-mjgm-b.raw will be decoded in blocks of 2000
+48000 samples in ./cen5-mjwl-b.raw will be decoded in blocks of 2000
+49600 samples in ./cen5-mmxg-b.raw will be decoded in blocks of 2000
+36800 samples in ./cen6-fjlp-b.raw will be decoded in blocks of 2000
+25600 samples in ./cen6-fvap-b.raw will be decoded in blocks of 2000
+33600 samples in ./cen6-marh-b.raw will be decoded in blocks of 2000
+51200 samples in ./cen6-mdms2-b.raw will be decoded in blocks of 2000
+35200 samples in ./cen6-menk-b.raw will be decoded in blocks of 2000
+41600 samples in ./cen6-miry-b.raw will be decoded in blocks of 2000
+36800 samples in ./cen6-mjgm-b.raw will be decoded in blocks of 2000
+30400 samples in ./cen6-mjwl-b.raw will be decoded in blocks of 2000
+33600 samples in ./cen6-mmxg-b.raw will be decoded in blocks of 2000
+52800 samples in ./cen7-fjlp-b.raw will be decoded in blocks of 2000
+35200 samples in ./cen7-fvap-b.raw will be decoded in blocks of 2000
+48000 samples in ./cen7-marh-b.raw will be decoded in blocks of 2000
+92800 samples in ./cen7-mdms2-b.raw will be decoded in blocks of 2000
+46400 samples in ./cen7-menk-b.raw will be decoded in blocks of 2000
+56000 samples in ./cen7-miry-b.raw will be decoded in blocks of 2000
+40000 samples in ./cen7-mjgm-b.raw will be decoded in blocks of 2000
+38400 samples in ./cen7-mjwl-b.raw will be decoded in blocks of 2000
+62400 samples in ./cen7-mmxg-b.raw will be decoded in blocks of 2000
+40000 samples in ./cen8-fjlp-b.raw will be decoded in blocks of 2000
+35200 samples in ./cen8-fvap-b.raw will be decoded in blocks of 2000
+38400 samples in ./cen8-marh-b.raw will be decoded in blocks of 2000
+46400 samples in ./cen8-mdms2-b.raw will be decoded in blocks of 2000
+40000 samples in ./cen8-menk-b.raw will be decoded in blocks of 2000
+44800 samples in ./cen8-miry-b.raw will be decoded in blocks of 2000
+28800 samples in ./cen8-mjgm-b.raw will be decoded in blocks of 2000
+36800 samples in ./cen8-mjwl-b.raw will be decoded in blocks of 2000
+36800 samples in ./cen8-mmxg-b.raw will be decoded in blocks of 2000
+INFO: spec_main_live_pretend.c(172): Beam= -460509, PBeam= -460509, WBeam= -230254, SVQBeam= -153503
+INFO: feat.c(971): Feature buffers initialized to 256 vectors
+INFO: cmn_prior.c(72): mean[0]= 12.00, mean[1..12]= 0.0
+
+Backtrace(an391-mjwl-b)
+ LatID  SFrm  EFrm        AScr     LScr Type
+    40     0    35     -200885   -74100   -1 <sil>
+   398    36    62     -700690  -148846    0 EIGHTY
+  1181    63    97     -628933   -74100   -1 <sil>
+  1502    98   127     -448924  -148846    0 NINE
+  1620   128   135     -203707   -74100   -1 <sil>
+  1977   136   152     -237933  -148846    0 EIGHT
+  2436   153   197     -734671   -74100   -1 <sil>
+  2438   198   198           0  -148846    0 </s>
+           0   198    -3155743  -891784 (Total)
+
+FWDVIT: 'EIGHTY NINE EIGHT ' (an391-mjwl-b)
+
+FWDXCT: an391-mjwl-b S 0 T -4047527 A -3155743 L -891784 0 -200885 -74100 <sil> 36 -700690 -148846 EIGHTY 63 -628933 -74100 <sil> 98 -448924 -148846 NINE 128 -203707 -74100 <sil> 136 -237933 -148846 EIGHT 153 -734671 -74100 <sil> 198
+
+INFO: utt.c(337):  198 frm;  1601 sen, 10116 gau/fr, Sen 0.00 CPU 0.00 Clk [Ovrhd 0.00 CPU 0.00 Clk];    739 hmm,  12 wd/fr, 0.00 CPU 0.00 Clk (an391-mjwl-b)
+INFO: utt.c(375): HMMHist[0..0](an391-mjwl-b): 16(8)
+INFO: lm.c(823):         0 tg(),         0 tgcache,        0 bo;     0 fills,        0 in mem (0.0%)
+INFO: lm.c(826):    28182 bg(),    28178 bo;     1 fills,        1 in mem (50.0%)
+
+Backtrace(an392-mjwl-b)
+ LatID  SFrm  EFrm        AScr     LScr Type
+    41     0    35     -311054   -74100   -1 <sil>
+   274    36    71     -391417  -148846    0 REPEAT
+   287    72    80     -113156   -74100   -1 <sil>
+   289    81    81           0  -148846    0 </s>
+           0    81     -815627  -445892 (Total)
+
+FWDVIT: 'REPEAT ' (an392-mjwl-b)
+
+FWDXCT: an392-mjwl-b S 0 T -1261519 A -815627 L -445892 0 -311054 -74100 <sil> 36 -391417 -148846 REPEAT 72 -113156 -74100 <sil> 81
+
+INFO: utt.c(337):   81 frm;  1118 sen,  7518 gau/fr, Sen 0.00 CPU 0.00 Clk [Ovrhd 0.00 CPU 0.00 Clk];    338 hmm,   4 wd/fr, 0.00 CPU 0.00 Clk (an392-mjwl-b)
+INFO: utt.c(375): HMMHist[0..0](an392-mjwl-b): 8(9)
+INFO: lm.c(823):         0 tg(),         0 tgcache,        0 bo;     0 fills,        0 in mem (0.0%)
+INFO: lm.c(826):     1105 bg(),     1101 bo;     0 fills,        1 in mem (50.0%)
+
+Backtrace(an393-mjwl-b)
+ LatID  SFrm  EFrm        AScr     LScr Type
+    28     0    29     -112840   -74100   -1 <sil>
+   426    30    78     -782563  -148846    0 ERASE(2)
+   480    79    87     -165595  -148846    0 P
+  1838    88   119     -620615  -148846    0 U
+  2814   120   140     -367463  -148846    0 D
+  3660   141   170     -456524  -148846    0 B
+  4220   171   192     -262991  -148846    0 E
+  4563   193   206     -345460   -74100   -1 <sil>
+  5621   207   233     -431548  -148846    0 I
+  6251   234   250     -309720   -74100   -1 <sil>
+  6253   251   251           0  -148846    0 </s>
+           0   251    -3855319 -1413068 (Total)
+
+FWDVIT: 'ERASE P U D B E I ' (an393-mjwl-b)
+
+FWDXCT: an393-mjwl-b S 0 T -5268387 A -3855319 L -1413068 0 -112840 -74100 <sil> 30 -782563 -148846 ERASE(2) 79 -165595 -148846 P 88 -620615 -148846 U 120 -367463 -148846 D 141 -456524 -148846 B 171 -262991 -148846 E 193 -345460 -74100 <sil> 207 -431548 -148846 I 234 -309720 -74100 <sil> 251
+
+INFO: utt.c(337):  251 frm;  1537 sen, 11129 gau/fr, Sen 0.00 CPU 0.00 Clk [Ovrhd 0.00 CPU 0.00 Clk];    715 hmm,  25 wd/fr, 0.00 CPU 0.00 Clk (an393-mjwl-b)
+INFO: utt.c(375): HMMHist[0..0](an393-mjwl-b): 16(6)
+INFO: lm.c(823):         0 tg(),         0 tgcache,        0 bo;     0 fills,        0 in mem (0.0%)
+INFO: lm.c(826):   142768 bg(),   142765 bo;     0 fills,        1 in mem (50.0%)
+***Instruction 10,003,263,365: End of initial fast-forward phase.
+
+Backtrace(an394-mjwl-b)
+ LatID  SFrm  EFrm        AScr     LScr Type
+    38     0    30     -270458   -74100   -1 <sil>
+   317    31    84     -509510  -148846    0 RUBOUT
+   369    85   129     -584840   -74100   -1 <sil>
+   671   130   172     -676212  -148846    0 U
+   752   173   190     -179031   -74100   -1 <sil>
+  1304   191   227     -464369  -148846    0 E
+  1876   228   261     -488641  -148846    0 U
+  2095   262   296     -598411  -148846    0 T
+  2388   297   315     -272355  -148846    0 I
+  3199   316   370     -800194  -148846    0 SIXTH
+  3243   371   380      -84533   -74100   -1 <sil>
+  3245   381   381           0  -148846    0 </s>
+           0   381    -4928554 -1487168 (Total)
+
+FWDVIT: 'RUBOUT U E U T I SIXTH ' (an394-mjwl-b)
+
+FWDXCT: an394-mjwl-b S 0 T -6415722 A -4928554 L -1487168 0 -270458 -74100 <sil> 31 -509510 -148846 RUBOUT 85 -584840 -74100 <sil> 130 -676212 -148846 U 173 -179031 -74100 <sil> 191 -464369 -148846 E 228 -488641 -148846 U 262 -598411 -148846 T 297 -272355 -148846 I 316 -800194 -148846 SIXTH 371 -84533 -74100 <sil> 381
+
+INFO: utt.c(337):  381 frm;  1342 sen,  9936 gau/fr, Sen 0.00 CPU 0.00 Clk [Ovrhd 0.00 CPU 0.00 Clk];    494 hmm,   9 wd/fr, 0.00 CPU 0.00 Clk (an394-mjwl-b)
+INFO: utt.c(375): HMMHist[0..0](an394-mjwl-b): 8(2)
+INFO: lm.c(823):         0 tg(),         0 tgcache,        0 bo;     0 fills,        0 in mem (0.0%)
+INFO: lm.c(826):    28794 bg(),    28791 bo;     0 fills,        1 in mem (50.0%)
+
+Backtrace(an395-mjwl-b)
+ LatID  SFrm  EFrm        AScr     LScr Type
+    43     0    35      -80149   -74100   -1 <sil>
+   161    36    71     -617200  -148846    0 ENTER(2)
+   448    72   106     -477907  -148846    0 ONE
+  1664   107   136     -542807  -148846    0 OH
+  2434   137   179     -556553  -148846    0 FOUR
+  2610   180   190     -178900   -74100   -1 <sil>
+  2620   191   191           0  -148846    0 </s>
+           0   191    -2453516  -892430 (Total)
+
+FWDVIT: 'ENTER ONE OH FOUR ' (an395-mjwl-b)
+
+FWDXCT: an395-mjwl-b S 0 T -3345946 A -2453516 L -892430 0 -80149 -74100 <sil> 36 -617200 -148846 ENTER(2) 72 -477907 -148846 ONE 107 -542807 -148846 OH 137 -556553 -148846 FOUR 180 -178900 -74100 <sil> 191
+
+INFO: utt.c(337):  191 frm;  1521 sen, 11072 gau/fr, Sen 0.00 CPU 0.00 Clk [Ovrhd 0.00 CPU 0.00 Clk];    683 hmm,  14 wd/fr, 0.00 CPU 0.00 Clk (an395-mjwl-b)
+INFO: utt.c(375): HMMHist[0..0](an395-mjwl-b): 6(3)
+INFO: lm.c(823):         0 tg(),         0 tgcache,        0 bo;     0 fills,        0 in mem (0.0%)
+INFO: lm.c(826):    58225 bg(),    58222 bo;     0 fills,        1 in mem (50.0%)
+
+Backtrace(an396-miry-b)
+ LatID  SFrm  EFrm        AScr     LScr Type
+   158     0    36     -635082   -74100   -1 <sil>
+   490    37    91    -1060700  -148846    0 ERASE
+   618    92   121     -426786   -74100   -1 <sil>
+  1025   122   153     -520192  -148846    0 EIGHT
+  1497   154   174     -359707  -148846    0 B
+  1618   175   178     -105795   -74100   -1 <sil>
+  2305   179   211     -443386  -148846    0 F
+  2406   212   220     -180175   -74100   -1 <sil>
+  2905   221   247     -421850  -148846    0 N
+  3695   248   294     -559717  -148846    0 Q
+  3885   295   306     -158528   -74100   -1 <sil>
+  4128   307   345     -376425  -148846    0 FIFTY
+  4240   346   384     -279432  -148846    0 SEVEN
+  4305   385   400      -87471   -74100   -1 <sil>
+  4307   401   401           0  -148846    0 </s>
+           0   401    -5615246 -1784214 (Total)
+
+FWDVIT: 'ERASE EIGHT B F N Q FIFTY SEVEN ' (an396-miry-b)
+
+FWDXCT: an396-miry-b S 0 T -7399460 A -5615246 L -1784214 0 -635082 -74100 <sil> 37 -1060700 -148846 ERASE 92 -426786 -74100 <sil> 122 -520192 -148846 EIGHT 154 -359707 -148846 B 175 -105795 -74100 <sil> 179 -443386 -148846 F 212 -180175 -74100 <sil> 221 -421850 -148846 N 248 -559717 -148846 Q 295 -158528 -74100 <sil> 307 -376425 -148846 FIFTY 346 -279432 -148846 SEVEN 385 -87471 -74100 <sil> 401
+
+INFO: utt.c(337):  401 frm;  1605 sen, 11451 gau/fr, Sen 0.00 CPU 0.00 Clk [Ovrhd 0.00 CPU 0.00 Clk];    761 hmm,  11 wd/fr, 0.00 CPU 0.00 Clk (an396-miry-b)
+INFO: utt.c(375): HMMHist[0..0](an396-miry-b): 16(3)
+INFO: lm.c(823):         0 tg(),         0 tgcache,        0 bo;     0 fills,        0 in mem (0.0%)
+INFO: lm.c(826):    50043 bg(),    50039 bo;     0 fills,        1 in mem (50.0%)
+
+Backtrace(an397-miry-b)
+ LatID  SFrm  EFrm        AScr     LScr Type
+    64     0    29     -235323   -74100   -1 <sil>
+   144    30    49     -211632  -148846    0 T
+   306    50    64     -215127  -148846    0 EIGHT
+   589    65    83     -354475  -148846    0 R
+   854    84   126     -572618  -148846    0 T
+   948   127   138     -173914   -74100   -1 <sil>
+  1267   139   165     -549457  -148846    0 F
+  2185   166   204     -689254  -148846    0 Y
+  2303   205   226     -159318   -74100   -1 <sil>
+  2425   227   268     -427956  -148846    0 SEVEN
+  2462   269   280      -91040   -74100   -1 <sil>
+  2464   281   281           0  -148846    0 </s>
+           0   281    -3680114 -1487168 (Total)
+
+FWDVIT: 'T EIGHT R T F Y SEVEN ' (an397-miry-b)
+
+FWDXCT: an397-miry-b S 0 T -5167282 A -3680114 L -1487168 0 -235323 -74100 <sil> 30 -211632 -148846 T 50 -215127 -148846 EIGHT 65 -354475 -148846 R 84 -572618 -148846 T 127 -173914 -74100 <sil> 139 -549457 -148846 F 166 -689254 -148846 Y 205 -159318 -74100 <sil> 227 -427956 -148846 SEVEN 269 -91040 -74100 <sil> 281
+
+INFO: utt.c(337):  281 frm;  1402 sen,  9942 gau/fr, Sen 0.00 CPU 0.00 Clk [Ovrhd 0.00 CPU 0.00 Clk];    556 hmm,   9 wd/fr, 0.00 CPU 0.00 Clk (an397-miry-b)
+INFO: utt.c(375): HMMHist[0..0](an397-miry-b): 8(2)
+INFO: lm.c(823):         0 tg(),         0 tgcache,        0 bo;     0 fills,        0 in mem (0.0%)
+INFO: lm.c(826):    22881 bg(),    22878 bo;     0 fills,        1 in mem (50.0%)
+***Instruction 20,007,742,955: End of fast-forward phase. Switching to timing processor and entering warmup phase.
+switching cpus
+***Instruction 20,035,894,769: End of warmup phase. Entering ROI #1.
+***Instruction 20,089,102,349: Exiting ROI #1. Switching to fast-forward processor.
+switching cpus
+
+Backtrace(an398-miry-b)
+ LatID  SFrm  EFrm        AScr     LScr Type
+   135     0    32     -517793   -74100   -1 <sil>
+   411    33    83     -822569  -148846    0 RUBOUT
+   450    84    94     -132117   -74100   -1 <sil>
+   730    95   139     -545096  -148846    0 C
+   808   140   150     -177947   -74100   -1 <sil>
+  1071   151   188     -542555  -148846    0 B
+  1161   189   195     -121049   -74100   -1 <sil>
+  1562   196   212     -455857  -148846    0 GO
+  2068   213   226     -240782  -148846    0 U
+  2264   227   232     -223990   -74100   -1 <sil>
+  2861   233   261     -252036  -148846    0 X
+  3007   262   273     -328634   -74100   -1 <sil>
+  5557   274   304     -515892  -148846    0 C
+  6980   305   325     -372817   -74100   -1 <sil>
+  7817   326   368     -404689  -148846    0 FOUR
+  7924   369   380     -119560   -74100   -1 <sil>
+  7926   381   381           0  -148846    0 </s>
+           0   381    -5773383 -1932414 (Total)
+
+FWDVIT: 'RUBOUT C B GO U X C FOUR ' (an398-miry-b)
+
+FWDXCT: an398-miry-b S 0 T -7705797 A -5773383 L -1932414 0 -517793 -74100 <sil> 33 -822569 -148846 RUBOUT 84 -132117 -74100 <sil> 95 -545096 -148846 C 140 -177947 -74100 <sil> 151 -542555 -148846 B 189 -121049 -74100 <sil> 196 -455857 -148846 GO 213 -240782 -148846 U 227 -223990 -74100 <sil> 233 -252036 -148846 X 262 -328634 -74100 <sil> 274 -515892 -148846 C 305 -372817 -74100 <sil> 326 -404689 -148846 FOUR 369 -119560 -74100 <sil> 381
+
+INFO: utt.c(337):  381 frm;  1505 sen, 10800 gau/fr, Sen 0.00 CPU 0.00 Clk [Ovrhd 0.00 CPU 0.00 Clk];    700 hmm,  21 wd/fr, 0.00 CPU 0.00 Clk (an398-miry-b)
+INFO: utt.c(375): HMMHist[0..0](an398-miry-b): 8(2)
+INFO: lm.c(823):         0 tg(),         0 tgcache,        0 bo;     0 fills,        0 in mem (0.0%)
+INFO: lm.c(826):   129910 bg(),   129906 bo;     0 fills,        1 in mem (50.0%)
+
+Backtrace(an399-miry-b)
+ LatID  SFrm  EFrm        AScr     LScr Type
+    51     0    30     -434674   -74100   -1 <sil>
+   422    31    77    -1049467  -148846    0 W
+   689    78   117     -572547  -148846    0 Y
+   766   118   123     -119391   -74100   -1 <sil>
+  2039   124   198     -996518  -148846    0 EIGHTEEN
+  2498   199   229     -332304  -148846    0 U
+  2603   230   247     -217567   -74100   -1 <sil>
+  2622   248   266     -131870   -74100   -1 <sil>
+  2688   267   309     -334004  -148846    0 SEVENTY
+  2790   310   353     -391354  -148846    0 SEVEN
+  2883   354   364     -268173   -74100   -1 <sil>
+  3642   365   412     -470124  -148846    0 SEVENTY
+  3789   413   451     -242728  -148846    0 SEVENTH
+  3820   452   460     -102441   -74100   -1 <sil>
+  3824   461   461           0  -148846    0 </s>
+           0   461    -5663162 -1784214 (Total)
+
+FWDVIT: 'W Y EIGHTEEN U SEVENTY SEVEN SEVENTY SEVENTH ' (an399-miry-b)
+
+FWDXCT: an399-miry-b S 0 T -7447376 A -5663162 L -1784214 0 -434674 -74100 <sil> 31 -1049467 -148846 W 78 -572547 -148846 Y 118 -119391 -74100 <sil> 124 -996518 -148846 EIGHTEEN 199 -332304 -148846 U 230 -217567 -74100 <sil> 248 -131870 -74100 <sil> 267 -334004 -148846 SEVENTY 310 -391354 -148846 SEVEN 354 -268173 -74100 <sil> 365 -470124 -148846 SEVENTY 413 -242728 -148846 SEVENTH 452 -102441 -74100 <sil> 461
+
+INFO: utt.c(337):  461 frm;  1179 sen,  8644 gau/fr, Sen 0.00 CPU 0.00 Clk [Ovrhd 0.00 CPU 0.00 Clk];    439 hmm,   8 wd/fr, 0.00 CPU 0.00 Clk (an399-miry-b)
+INFO: utt.c(375): HMMHist[0..0](an399-miry-b): 13(2)
+INFO: lm.c(823):         0 tg(),         0 tgcache,        0 bo;     0 fills,        0 in mem (0.0%)
+INFO: lm.c(826):    27742 bg(),    27739 bo;     0 fills,        1 in mem (50.0%)
+
+Backtrace(an400-miry-b)
+ LatID  SFrm  EFrm        AScr     LScr Type
+   136     0    31     -428829   -74100   -1 <sil>
+   300    32    75     -782249  -148846    0 ENTER(2)
+   325    76    86     -101324   -74100   -1 <sil>
+   496    87   119     -513658  -148846    0 EIGHT
+   721   120   140     -200826   -74100   -1 <sil>
+   723   141   141           0  -148846    0 </s>
+           0   141    -2026886  -668838 (Total)
+
+FWDVIT: 'ENTER EIGHT ' (an400-miry-b)
+
+FWDXCT: an400-miry-b S 0 T -2695724 A -2026886 L -668838 0 -428829 -74100 <sil> 32 -782249 -148846 ENTER(2) 76 -101324 -74100 <sil> 87 -513658 -148846 EIGHT 120 -200826 -74100 <sil> 141
+
+INFO: utt.c(337):  141 frm;  1619 sen, 11576 gau/fr, Sen 0.00 CPU 0.00 Clk [Ovrhd 0.00 CPU 0.00 Clk];    732 hmm,   5 wd/fr, 0.00 CPU 0.00 Clk (an400-miry-b)
+INFO: utt.c(375): HMMHist[0..0](an400-miry-b): 6(4)
+INFO: lm.c(823):         0 tg(),         0 tgcache,        0 bo;     0 fills,        0 in mem (0.0%)
+INFO: lm.c(826):     4734 bg(),     4731 bo;     0 fills,        1 in mem (50.0%)
+
+Backtrace(an401-mdms2-b)
+ LatID  SFrm  EFrm        AScr     LScr Type
+    45     0    34     -156652   -74100   -1 <sil>
+   389    35    84     -872239  -148846    0 ENTER(2)
+   421    85   100     -123135   -74100   -1 <sil>
+   541   101   152     -533574  -148846    0 SEVEN
+   650   153   164     -269108   -74100   -1 <sil>
+  1203   165   202     -510421  -148846    0 ONE
+  1378   203   215     -260888   -74100   -1 <sil>
+  1980   216   266     -801128  -148846    0 FIVE
+  2078   267   278     -172877   -74100   -1 <sil>
+  2456   279   323     -708715  -148846    0 FOUR
+  2485   324   330      -47947   -74100   -1 <sil>
+  2487   331   331           0  -148846    0 </s>
+           0   331    -4456684 -1337676 (Total)
+
+FWDVIT: 'ENTER SEVEN ONE FIVE FOUR ' (an401-mdms2-b)
+
+FWDXCT: an401-mdms2-b S 0 T -5794360 A -4456684 L -1337676 0 -156652 -74100 <sil> 35 -872239 -148846 ENTER(2) 85 -123135 -74100 <sil> 101 -533574 -148846 SEVEN 153 -269108 -74100 <sil> 165 -510421 -148846 ONE 203 -260888 -74100 <sil> 216 -801128 -148846 FIVE 267 -172877 -74100 <sil> 279 -708715 -148846 FOUR 324 -47947 -74100 <sil> 331
+
+INFO: utt.c(337):  331 frm;  1570 sen, 11531 gau/fr, Sen 0.00 CPU 0.00 Clk [Ovrhd 0.00 CPU 0.00 Clk];    703 hmm,   8 wd/fr, 0.00 CPU 0.00 Clk (an401-mdms2-b)
+INFO: utt.c(375): HMMHist[0..0](an401-mdms2-b): 8(2)
+INFO: lm.c(823):         0 tg(),         0 tgcache,        0 bo;     0 fills,        0 in mem (0.0%)
+INFO: lm.c(826):    14899 bg(),    14895 bo;     0 fills,        1 in mem (50.0%)
+
+Backtrace(an402-mdms2-b)
+ LatID  SFrm  EFrm        AScr     LScr Type
+    48     0    32     -342911   -74100   -1 <sil>
+   431    33    64     -545624  -148846    0 NO
+   536    65    80     -136886   -74100   -1 <sil>
+   538    81    81           0  -148846    0 </s>
+           0    81    -1025421  -445892 (Total)
+
+FWDVIT: 'NO ' (an402-mdms2-b)
+
+FWDXCT: an402-mdms2-b S 0 T -1471313 A -1025421 L -445892 0 -342911 -74100 <sil> 33 -545624 -148846 NO 65 -136886 -74100 <sil> 81
+
+INFO: utt.c(337):   81 frm;  1517 sen, 11151 gau/fr, Sen 0.00 CPU 0.00 Clk [Ovrhd 0.00 CPU 0.00 Clk];    617 hmm,   7 wd/fr, 0.00 CPU 0.00 Clk (an402-mdms2-b)
+INFO: utt.c(375): HMMHist[0..0](an402-mdms2-b): 8(9)
+INFO: lm.c(823):         0 tg(),         0 tgcache,        0 bo;     0 fills,        0 in mem (0.0%)
+INFO: lm.c(826):     5649 bg(),     5645 bo;     0 fills,        1 in mem (50.0%)
+***Instruction 30,090,164,237: End of fast-forward phase. Switching to timing processor and entering warmup phase.
+switching cpus
+***Instruction 30,118,302,121: End of warmup phase. Entering ROI #2.
+***Instruction 30,171,081,644: Exiting ROI #2. Switching to fast-forward processor.
+switching cpus
+
+Backtrace(an403-mdms2-b)
+ LatID  SFrm  EFrm        AScr     LScr Type
+    56     0    34     -276516   -74100   -1 <sil>
+   123    35    71     -394298  -148846    0 G
+   774    72   108     -602852  -148846    0 S
+   862   109   115      -99073   -74100   -1 <sil>
+  1157   116   146     -514937  -148846    0 T
+  2374   147   195     -713914  -148846    0 Q
+  2634   196   222     -215805   -74100   -1 <sil>
+  2898   223   263     -727921  -148846    0 ONE
+  3849   264   299     -420107  -148846    0 THREE
+  4185   300   335     -428331  -148846    0 THREE
+  4461   336   374     -655402  -148846    0 TWO
+  4565   375   390     -120758   -74100   -1 <sil>
+  4567   391   391           0  -148846    0 </s>
+           0   391    -5169914 -1636014 (Total)
+
+FWDVIT: 'G S T Q ONE THREE THREE TWO ' (an403-mdms2-b)
+
+FWDXCT: an403-mdms2-b S 0 T -6805928 A -5169914 L -1636014 0 -276516 -74100 <sil> 35 -394298 -148846 G 72 -602852 -148846 S 109 -99073 -74100 <sil> 116 -514937 -148846 T 147 -713914 -148846 Q 196 -215805 -74100 <sil> 223 -727921 -148846 ONE 264 -420107 -148846 THREE 300 -428331 -148846 THREE 336 -655402 -148846 TWO 375 -120758 -74100 <sil> 391
+
+INFO: utt.c(337):  391 frm;  1502 sen, 11055 gau/fr, Sen 0.00 CPU 0.00 Clk [Ovrhd 0.00 CPU 0.00 Clk];    701 hmm,  12 wd/fr, 0.00 CPU 0.00 Clk (an403-mdms2-b)
+INFO: utt.c(375): HMMHist[0..0](an403-mdms2-b): 6(1)
+INFO: lm.c(823):         0 tg(),         0 tgcache,        0 bo;     0 fills,        0 in mem (0.0%)
+INFO: lm.c(826):    52310 bg(),    52307 bo;     0 fills,        1 in mem (50.0%)
+
+Backtrace(an404-mdms2-b)
+ LatID  SFrm  EFrm        AScr     LScr Type
+    55     0    24     -288895   -74100   -1 <sil>
+   614    25    58     -536150  -148846    0 L
+   951    59    91     -387012  -148846    0 K
+  1179    92   132     -450904  -148846    0 K
+  1226   133   137     -132504   -74100   -1 <sil>
+  2307   138   190     -800912  -148846    0 ENTER
+  2470   191   204     -144771   -74100   -1 <sil>
+  2687   205   245     -326150  -148846    0 THIRTY
+  2988   246   280     -545558  -148846    0 EIGHTH
+  3060   281   300     -158223   -74100   -1 <sil>
+  3062   301   301           0  -148846    0 </s>
+           0   301    -3771079 -1338322 (Total)
+
+FWDVIT: 'L K K ENTER THIRTY EIGHTH ' (an404-mdms2-b)
+
+FWDXCT: an404-mdms2-b S 0 T -5109401 A -3771079 L -1338322 0 -288895 -74100 <sil> 25 -536150 -148846 L 59 -387012 -148846 K 92 -450904 -148846 K 133 -132504 -74100 <sil> 138 -800912 -148846 ENTER 191 -144771 -74100 <sil> 205 -326150 -148846 THIRTY 246 -545558 -148846 EIGHTH 281 -158223 -74100 <sil> 301
+
+INFO: utt.c(337):  301 frm;  1543 sen, 11246 gau/fr, Sen 0.00 CPU 0.00 Clk [Ovrhd 0.00 CPU 0.00 Clk];    732 hmm,  10 wd/fr, 0.00 CPU 0.00 Clk (an404-mdms2-b)
+INFO: utt.c(375): HMMHist[0..0](an404-mdms2-b): 16(5)
+INFO: lm.c(823):         0 tg(),         0 tgcache,        0 bo;     0 fills,        0 in mem (0.0%)
+INFO: lm.c(826):    40314 bg(),    40311 bo;     0 fills,        1 in mem (50.0%)
+
+Backtrace(an405-mdms2-b)
+ LatID  SFrm  EFrm        AScr     LScr Type
+    86     0    33     -439468   -74100   -1 <sil>
+   567    34    87     -865843  -148846    0 RUBOUT
+   749    88   122     -379910   -74100   -1 <sil>
+  1019   123   159     -505842  -148846    0 B
+  1569   160   212     -814010  -148846    0 C
+  1650   213   221      -86920   -74100   -1 <sil>
+  1704   222   234     -230029  -148846    0 G
+  2024   235   267     -411998  -148846    0 EIGHT
+  3027   268   305     -433262  -148846    0 H
+  3198   306   344     -540680  -148846    0 P
+  3272   345   389     -258311   -74100   -1 <sil>
+  3364   390   435     -523820  -148846    0 SEVEN
+  3532   436   462     -243941  -148846    0 THIRTY
+  3843   463   516     -530089  -148846    0 SIX
+  3903   517   540     -229823   -74100   -1 <sil>
+  3905   541   541           0  -148846    0 </s>
+           0   541    -6493946 -2007806 (Total)
+
+FWDVIT: 'RUBOUT B C G EIGHT H P SEVEN THIRTY SIX ' (an405-mdms2-b)
+
+FWDXCT: an405-mdms2-b S 0 T -8501752 A -6493946 L -2007806 0 -439468 -74100 <sil> 34 -865843 -148846 RUBOUT 88 -379910 -74100 <sil> 123 -505842 -148846 B 160 -814010 -148846 C 213 -86920 -74100 <sil> 222 -230029 -148846 G 235 -411998 -148846 EIGHT 268 -433262 -148846 H 306 -540680 -148846 P 345 -258311 -74100 <sil> 390 -523820 -148846 SEVEN 436 -243941 -148846 THIRTY 463 -530089 -148846 SIX 517 -229823 -74100 <sil> 541
+
+INFO: utt.c(337):  541 frm;  1282 sen,  9261 gau/fr, Sen 0.00 CPU 0.00 Clk [Ovrhd 0.00 CPU 0.00 Clk];    507 hmm,   7 wd/fr, 0.00 CPU 0.00 Clk (an405-mdms2-b)
+INFO: utt.c(375): HMMHist[0..0](an405-mdms2-b): 6(1)
+INFO: lm.c(823):         0 tg(),         0 tgcache,        0 bo;     0 fills,        0 in mem (0.0%)
+INFO: lm.c(826):    41160 bg(),    41156 bo;     0 fills,        1 in mem (50.0%)
+***Instruction 40,172,211,189: End of fast-forward phase. Switching to timing processor and entering warmup phase.
+switching cpus
+***Instruction 40,200,524,039: End of warmup phase. Entering ROI #3.
+
+Backtrace(an416-fjlp-b)
+ LatID  SFrm  EFrm        AScr     LScr Type
+    45     0    34     -252296   -74100   -1 <sil>
+   142    35    66     -529822  -148846    0 NO
+   295    67    80     -227181   -74100   -1 <sil>
+   297    81    81           0  -148846    0 </s>
+           0    81    -1009299  -445892 (Total)
+
+FWDVIT: 'NO ' (an416-fjlp-b)
+
+FWDXCT: an416-fjlp-b S 0 T -1455191 A -1009299 L -445892 0 -252296 -74100 <sil> 35 -529822 -148846 NO 67 -227181 -74100 <sil> 81
+
+INFO: utt.c(337):   81 frm;  1506 sen, 11554 gau/fr, Sen 0.00 CPU 0.00 Clk [Ovrhd 0.00 CPU 0.00 Clk];    607 hmm,   4 wd/fr, 0.00 CPU 0.00 Clk (an416-fjlp-b)
+INFO: utt.c(375): HMMHist[0..0](an416-fjlp-b): 8(9)
+INFO: lm.c(823):         0 tg(),         0 tgcache,        0 bo;     0 fills,        0 in mem (0.0%)
+INFO: lm.c(826):     1416 bg(),     1413 bo;     0 fills,        1 in mem (50.0%)
+***Instruction 40,253,813,262: Exiting ROI #3. Switching to fast-forward processor.
+switching cpus
+***Instruction 40,253,813,262: Maximum number of ROIs reached, ending simulation.
+***Instruction 40,253,813,263, tick 6,184,264,925,420: Exiting because a thread reached the max instruction count.
+***Total wall clock time: 21.62 min

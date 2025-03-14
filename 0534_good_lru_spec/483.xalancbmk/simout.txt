@@ -1,0 +1,46 @@
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 24.1.0.2
+gem5 compiled Mar 14 2025 03:45:19
+gem5 started Mar 14 2025 05:34:37
+gem5 executing on pedagogical-2, pid 3806751
+command line: /tmp/roym/predmech_lab2/gem5-configs-395t/../build/X86/gem5.opt --outdir=/tmp/roym/predmech_lab2/0534/483.xalancbmk/483.xalancbmk -re -- /tmp/roym/predmech_lab2/gem5-configs-395t/se_custom_binary_periodic.py --input-bin=/tmp/roym/predmech_lab2/spec06/483.xalancbmk/Xalan_base.amd64-m64-gcc42-nn '--input-args=-v /tmp/roym/predmech_lab2/spec06/483.xalancbmk/t5.xml /tmp/roym/predmech_lab2/spec06/483.xalancbmk/xalanc.xsl' --ff-interval=10000 --warmup-interval=25 --roi-interval=50 --init-ff-interval=10000 --num-rois=3
+
+info: Standard input is not a terminal, disabling listeners.
+Creating SkylakeCPU object: bpred=SkylakeTAGE
+Creating X86 Switchable Processor: num_cores=1, start_core_type=CPUTypes.KVM, switch_core_type=CPUTypes.TIMING
+Creating ThreeLevelClassicHierarchy
+***Fast-forward interval: 10,000,000,000 instructions
+***Warmup interval      : 25,000,000 instructions
+***ROI interval         : 50,000,000 instructions
+***Initial fast-forward : 10,000,000,000 instructions
+***Maximum ROIs         : 3
+***Continue simulation  : False
+***Beginning simulation!
+Creating L1DCache object: size=32768, assoc=8, pref=StridePrefetcher, repl=LRURP
+Creating L1ICache object: size=32768, assoc=8, pref=<class 'm5.params.NullSimObject'>, repl=LRURP
+Creating L2Cache object: size=1048576, assoc=16, pref=<class 'm5.params.NullSimObject'>, repl=LRURP
+Creating MMUCache object
+Creating MMUCache object
+Creating LLCache object: size=8388608, assoc=16, pref=<class 'm5.params.NullSimObject'>, repl=LRURP
+Global frequency set at 1000000000000 ticks per second
+***Instruction 10,002,592,080: End of initial fast-forward phase.
+***Instruction 20,002,592,118: End of fast-forward phase. Switching to timing processor and entering warmup phase.
+switching cpus
+***Instruction 20,030,054,858: End of warmup phase. Entering ROI #1.
+***Instruction 20,082,506,981: Exiting ROI #1. Switching to fast-forward processor.
+switching cpus
+***Instruction 30,086,102,454: End of fast-forward phase. Switching to timing processor and entering warmup phase.
+switching cpus
+***Instruction 30,113,777,428: End of warmup phase. Entering ROI #2.
+***Instruction 30,166,462,691: Exiting ROI #2. Switching to fast-forward processor.
+switching cpus
+***Instruction 40,167,397,276: End of fast-forward phase. Switching to timing processor and entering warmup phase.
+switching cpus
+***Instruction 40,194,443,467: End of warmup phase. Entering ROI #3.
+***Instruction 40,247,176,667: Exiting ROI #3. Switching to fast-forward processor.
+switching cpus
+***Instruction 40,247,176,667: Maximum number of ROIs reached, ending simulation.
+***Instruction 40,247,176,668, tick 14,017,171,224,990: Exiting because a thread reached the max instruction count.
+***Total wall clock time: 27.24 min
