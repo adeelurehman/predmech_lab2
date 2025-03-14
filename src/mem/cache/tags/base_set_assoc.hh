@@ -191,6 +191,54 @@ class BaseSetAssoc : public BaseTags
         return victim;
     }
 
+    CacheBlk* findVictim(const CacheBlk::KeyType& key,
+                         const std::size_t size,
+                         std::vector<CacheBlk*>& evict_blks,
+                         const uint64_t partition_id=0) override
+    {
+        // Get possible entries to be victimized
+        std::vector<ReplaceableEntry*> entries =
+            indexingPolicy->getPossibleEntries(key);
+
+        // Filter entries based on PartitionID
+        if (partitionManager) {
+            partitionManager->filterByPartition(entries, partition_id);
+        }
+
+        // Choose replacement victim from replacement candidates
+        CacheBlk* victim = entries.empty() ? nullptr :
+            static_cast<CacheBlk*>(replacementPolicy->getVictim(entries));
+
+        // There is only one eviction for this replacement
+        evict_blks.push_back(victim);
+
+        return victim;
+    }
+
+    CacheBlk* findVictim(const CacheBlk::KeyType& key,
+                         const std::size_t size,
+                         std::vector<CacheBlk*>& evict_blks,
+                         const uint64_t partition_id=0, const PacketPtr pkt) override
+    {
+        // Get possible entries to be victimized
+        std::vector<ReplaceableEntry*> entries =
+            indexingPolicy->getPossibleEntries(key);
+
+        // Filter entries based on PartitionID
+        if (partitionManager) {
+            partitionManager->filterByPartition(entries, partition_id);
+        }
+
+        // Choose replacement victim from replacement candidates
+        CacheBlk* victim = entries.empty() ? nullptr :
+            static_cast<CacheBlk*>(replacementPolicy->getVictim(entries, pkt));
+
+        // There is only one eviction for this replacement
+        evict_blks.push_back(victim);
+
+        return victim;
+    }
+
     /**
      * Insert the new block into the cache and update replacement data.
      *

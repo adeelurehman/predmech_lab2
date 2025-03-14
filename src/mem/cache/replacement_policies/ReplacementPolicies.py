@@ -175,3 +175,21 @@ class WeightedLRURP(LRURP):
     type = "WeightedLRURP"
     cxx_class = "gem5::replacement_policy::WeightedLRU"
     cxx_header = "mem/cache/replacement_policies/weighted_lru_rp.hh"
+
+class PerceptReuseRP(BRRIPRP):
+    type = "PerceptReuseRP"
+    cxx_class = "gem5::replacement_policy::PerceptReuse"
+    cxx_header = "mem/cache/replacement_policies/perceptreuse_rp.hh"
+
+    weight_size = Param.Unsigned(6, "Number of bits in weight")
+    weight_table_size = Param.Unsigned(256, "weight_table_size")
+    weight_init = Param.Unsigned(0, "weight_init")
+    TAU_REPLACE = Param.Unsigned(124, "TAU_REPLACE")
+    TAU_BYPASS = Param.Unsigned(3, "TAU_BYPASS")
+    theta = Param.Unsigned(68, "Training threshold")
+    # system = Param.System(Parent.any, "System object")
+
+    # Always make hits mark entries as last to be evicted, we are not using it.
+    hit_priority = True
+    # Let the predictor decide when to change insertion policy
+    btp = 0

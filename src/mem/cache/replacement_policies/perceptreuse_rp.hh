@@ -9,8 +9,8 @@
     UT CS 395T Prediction Mechanisms in Comp Arch - Sp25
  */
 
-#ifndef __MEM_CACHE_REPLACEMENT_POLICIES_SHIP_RP_HH__
-#define __MEM_CACHE_REPLACEMENT_POLICIES_SHIP_RP_HH__
+#ifndef __MEM_CACHE_REPLACEMENT_POLICIES_PERCEPTREUSE_RP_HH__
+#define __MEM_CACHE_REPLACEMENT_POLICIES_PERCEPTREUSE_RP_HH__
 
 #include <array>
 
@@ -20,7 +20,8 @@
 
 namespace gem5 {
 
-struct PRParams; //TODO: figure out how to pass params properly
+//TODO: figure out how to pass params properly
+struct PerceptReuseRPParams; 
 
 namespace replacement_policy {
 
@@ -40,27 +41,40 @@ class PerceptReuse : public BRRIP
         int weight_init; // TODO: same
         int TAU_REPLACE; // TODO: same
         int TAU_BYPASS; // TODO: same
+        int theta;
 
-        // is this even legal
+        Addr PCi[4] = {0,0,0,0};
+
+        // TODO: is this even legal (A: No.)
         // typedef GenericSatCounter<uint16_t>::
         //     GenericSatCounter(signature_counter_size, weight_init)
         // PRSatCount;
-        typedef SatCounter8(signature_counter_size, weight_init) PRSatCount;
-        typedef std::array<uint32_t, 6> Signs;
+        // typedef SatCounter8(signature_counter_size, weight_init) PRSatCount;
+        typedef std::array<Addr, 6> Signs;
 
         // TODO: get core count from params and make these per core
-        std::array<std::array<PRSatCount, sign_weight_table_size>, 6> PRCPT_WT;
-        std::array<Addr, 4> PCi;
+        std::array<std::vector<SatCounter8>, 6> PRCPT_WT;
+        // std::vector<std::array<std::array<PRSatCount, sign_weight_table_size>, 6>> PRCPT_WT; for multicore
+
+        // std::array<Addr, 4> PCi;
 
         struct PRReplData : public BRRIPReplData
-        { // CONTAINS PER CACHE LINE METADATA (I THINK)
+        { // CONTAINS PER CACHE LINE METADATA (I THINK) (yes it does)
             Signs signatures;
-            int64_t prediction;
+            // int64_t prediction;
             bool used;
-        }
+            Addr address;
+        };
+
+        bool inSamplerSet() const;
+        void UpdateHistory(const PacketPtr pkr);
+        Signs getSignatures(const PacketPtr pkt) const;
+        int64_t getPrediction(Signs signs);
+        void trainWeights(Signs signs, bool polarity);
 
     public:
-        PerceptReuse(const PRParams &p);
+        typedef PerceptReuseRPParams Params;
+        PerceptReuse(const Params &p);
         ~PerceptReuse() = default;
 
 
@@ -69,12 +83,16 @@ class PerceptReuse : public BRRIP
         void touch(const std::shared_ptr<ReplacementData>& replacement_data)
             const override;
 
+        void reset(const std::shared_ptr<ReplacementData>& replacement_data,
+            const PacketPtr pkt) override;
+        void reset(const std::shared_ptr<ReplacementData>& replacement_data)
+            const override;
 
-        bool inSamplerSet() const;
-        Signs getSignatures(const PacketPtr pkt) const;
-        int64_t getPrediction(Signs signs);
-        void trainWeights(Signs signs, bool polarity);
-}
+        // bool PerceptReuse::checkBypass(const PacketPtr pkt) override;
+
+        ReplaceableEntry* getVictim(const ReplacementCandidates& candidates, const PacketPtr pkt) override;
+        ReplaceableEntry* getVictim(const ReplacementCandidates& candidates) const override;
+};
 
 
 

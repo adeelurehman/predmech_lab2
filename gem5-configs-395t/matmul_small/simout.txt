@@ -1,0 +1,22 @@
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 24.1.0.2
+gem5 compiled Mar  1 2025 18:46:46
+gem5 started Mar  2 2025 19:06:30
+gem5 executing on pedagogical-1, pid 2661946
+command line: ./build/X86/gem5.opt --outdir gem5-configs-395t/matmul_small -re -- gem5-configs-395t/se_custom_binary.py --input-bin=/scratch/cluster/speedway/cs395t/hw2/part1/bin/matmul_small
+
+Creating SkylakeCPU object: bpred=SkylakeTAGE
+Creating X86 Processor: num_cores=1, core_type=CPUTypes.O3
+Creating ThreeLevelClassicHierarchy
+***Beginning simulation!
+Creating L1DCache object: size=32768, assoc=8, pref=StridePrefetcher, repl=LRURP
+Creating L1ICache object: size=32768, assoc=8, pref=<class 'm5.params.NullSimObject'>, repl=LRURP
+Creating L2Cache object: size=1048576, assoc=16, pref=<class 'm5.params.NullSimObject'>, repl=LRURP
+Creating MMUCache object
+Creating MMUCache object
+Creating LLCache object: size=8388608, assoc=16, pref=<class 'm5.params.NullSimObject'>, repl=LRURP
+Global frequency set at 1000000000000 ticks per second
+***Exiting @ tick 26521180500 because exiting with last active thread context.
+Total wall clock time: 409.39 s = 6.82 min

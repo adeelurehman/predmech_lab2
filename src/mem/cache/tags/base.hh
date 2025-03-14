@@ -287,6 +287,12 @@ class BaseTags : public ClockedObject
                                  std::vector<CacheBlk*>& evict_blks,
                                  const uint64_t partition_id=0) = 0;
 
+    virtual CacheBlk* findVictim(const CacheBlk::KeyType &key,
+                         const std::size_t size,
+                         std::vector<CacheBlk*>& evict_blks, const PacketPtr pkt,
+                         const uint64_t partition_id=0) 
+                         { return findVictim(key, size, evict_blks, partition_id); };
+
     /**
      * Access block and update replacement data. May not succeed, in which case
      * nullptr is returned. This has all the implications of a cache access and

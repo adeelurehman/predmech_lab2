@@ -1,0 +1,37 @@
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 24.1.0.2
+gem5 compiled Mar  1 2025 18:46:46
+gem5 started Mar  2 2025 18:18:59
+gem5 executing on pedagogical-1, pid 2652628
+command line: ./build/X86/gem5.opt --outdir gem5-configs-395t/bfs_small -re -- gem5-configs-395t/se_custom_binary.py --input-bin=/scratch/cluster/speedway/cs395t/hw2/part1/bin/bfs '--input-args=-n 1 -r 1 -f /scratch/cluster/speedway/cs395t/hw2/part1/inputs/bfs_small.sg' --max-insts=102792572
+
+Creating SkylakeCPU object: bpred=SkylakeTAGE
+Creating X86 Processor: num_cores=1, core_type=CPUTypes.O3
+Creating ThreeLevelClassicHierarchy
+***Beginning simulation!
+Creating L1DCache object: size=32768, assoc=8, pref=StridePrefetcher, repl=LRURP
+Creating L1ICache object: size=32768, assoc=8, pref=<class 'm5.params.NullSimObject'>, repl=LRURP
+Creating L2Cache object: size=1048576, assoc=16, pref=<class 'm5.params.NullSimObject'>, repl=LRURP
+Creating MMUCache object
+Creating MMUCache object
+Creating LLCache object: size=8388608, assoc=16, pref=<class 'm5.params.NullSimObject'>, repl=LRURP
+Global frequency set at 1000000000000 ticks per second
+Read Time:           0.00244
+Graph has 1048575 nodes and 15699687 undirected edges for degree: 14
+Source:                    1
+    i                0.00650
+   td          3     0.00000
+   td       1718     0.00002
+    e                0.00001
+   bu     360656     0.02616
+   bu     280237     0.01388
+   bu       2645     0.00628
+    c                0.00318
+   td          9     0.00008
+   td          0     0.00000
+Trial Time:          0.05834
+Average Time:        0.05834
+***Exiting @ tick 60900214500 because exiting with last active thread context.
+Total wall clock time: 825.28 s = 13.75 min
