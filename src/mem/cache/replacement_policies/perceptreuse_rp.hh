@@ -54,6 +54,7 @@ class PerceptReuse : public BRRIP
 
         // TODO: get core count from params and make these per core
         std::array<std::vector<SatCounter8>, 6> PRCPT_WT;
+        // std::array<std::array<SatCounter8(6, 0), 256>, 6> PRCPT_WT;
         // std::vector<std::array<std::array<PRSatCount, sign_weight_table_size>, 6>> PRCPT_WT; for multicore
 
         // std::array<Addr, 4> PCi;

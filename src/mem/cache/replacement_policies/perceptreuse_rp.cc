@@ -24,11 +24,8 @@ PerceptReuse::PerceptReuse(const Params &p) :
 
     // PRCPT_WT.resize(p.system->numContexts()); for multicore
     
-    for (auto& row : PRCPT_WT) {
-        row.resize(weight_table_size);
-        for (auto& counter : row) {
-            counter = SatCounter8(weight_size, weight_init);
-        }
+    for (auto& vec : PRCPT_WT) {
+        vec = std::vector<SatCounter8>(weight_table_size, SatCounter8(weight_size));
     }
 }
 
