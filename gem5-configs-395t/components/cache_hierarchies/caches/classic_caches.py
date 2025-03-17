@@ -13,6 +13,7 @@ from m5.objects import (
     StridePrefetcher,
     BaseReplacementPolicy,
     LRURP,
+    PerceptReuseRP,
     NULL,
 )
 
@@ -186,7 +187,7 @@ class LLCache(Cache):
         write_buffers: int = 128,  # Matched to ChampSim default for 4 cores
         # FIXME TODO: Set these appropriately.
         prefetcher: BasePrefetcher = NULL,
-        replacement_policy: BaseReplacementPolicy = LRURP(),
+        replacement_policy: BaseReplacementPolicy = PerceptReuseRP(),
         # The below should be false if downstream cache is mostly inclusive or if there is no
         # downstream cache, true if downstream cache is mostly exclusive
         writeback_clean: bool = False,
