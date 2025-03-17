@@ -1,0 +1,75 @@
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 24.1.0.2
+gem5 compiled Mar 14 2025 05:14:19
+gem5 started Mar 16 2025 21:30:24
+gem5 executing on pedagogical-1, pid 165631
+command line: /tmp/arehman/Gem5_p1/gem5-configs-395t/../build/X86/gem5.opt --outdir=/tmp/arehman/Gem5_p1/2130/450.soplex -re -- /tmp/arehman/Gem5_p1/gem5-configs-395t/se_custom_binary_periodic.py --input-bin=/tmp/arehman/Gem5_p1/spec06/450.soplex/soplex_base.amd64-m64-gcc42-nn '--input-args=-s1 -e -m45000 /tmp/arehman/Gem5_p1/spec06/450.soplex/pds-50.mps' --ff-interval=10000 --warmup-interval=25 --roi-interval=50 --init-ff-interval=10000 --num-rois=3
+
+Creating SkylakeCPU object: bpred=SkylakeTAGE
+Creating X86 Switchable Processor: num_cores=1, start_core_type=CPUTypes.KVM, switch_core_type=CPUTypes.TIMING
+Creating ThreeLevelClassicHierarchy
+***Fast-forward interval: 10,000,000,000 instructions
+***Warmup interval      : 25,000,000 instructions
+***ROI interval         : 50,000,000 instructions
+***Initial fast-forward : 10,000,000,000 instructions
+***Maximum ROIs         : 3
+***Continue simulation  : False
+***Beginning simulation!
+Creating L1DCache object: size=32768, assoc=8, pref=StridePrefetcher, repl=LRURP
+Creating L1ICache object: size=32768, assoc=8, pref=<class 'm5.params.NullSimObject'>, repl=LRURP
+Creating L2Cache object: size=1048576, assoc=16, pref=<class 'm5.params.NullSimObject'>, repl=LRURP
+Creating MMUCache object
+Creating MMUCache object
+Creating LLCache object: size=8388608, assoc=16, pref=<class 'm5.params.NullSimObject'>, repl=PerceptReuseRP
+Global frequency set at 1000000000000 ticks per second
+Delta   =     1.000000e-06
+Epsilon =     1.000000e-17
+Leaving algorithm
+Column representation
+Forest-Tomlin update
+Steep pricing
+Fast ratiotest
+No scaling
+General simplifier
+Weight starter
+loading LP file /tmp/arehman/Gem5_p1/spec06/450.soplex/pds-50.mps
+LP has 83060	rows and
+       270095	columns
+solving LP
+SPxRem1SM:	removed 1237 row(s)
+SPxRem1SM:	removed 1014 column(s)
+SPxRem1SM:	removed 290 row(s)
+SPxRem1SM:	removed 132 column(s)
+SPxRem1SM:	removed 99 row(s)
+SPxRem1SM:	removed 99 column(s)
+SPxAggregateSM:	removed 11543 row(s) and column(s)
+SPxAggregateSM:	delta = -9.870000e+07
+SPxRedundantSM: removed 803 column(s)
+SPxRedundantSM:	removed 292 row(s)
+SPxAggregateSM:	removed 29828 row(s) and column(s)
+SPxAggregateSM:	delta = -5.289000e+08
+SPxAggregateSM:	removed 861 row(s) and column(s)
+SPxAggregateSM:	delta = -5.289000e+08
+removed 44150 rows
+removed 44280 columns
+***Instruction 10,000,000,021: End of initial fast-forward phase.
+***Instruction 20,000,829,303: End of fast-forward phase. Switching to timing processor and entering warmup phase.
+switching cpus
+***Instruction 20,028,571,062: End of warmup phase. Entering ROI #1.
+***Instruction 20,081,059,326: Exiting ROI #1. Switching to fast-forward processor.
+switching cpus
+***Instruction 30,081,197,411: End of fast-forward phase. Switching to timing processor and entering warmup phase.
+switching cpus
+***Instruction 30,108,528,600: End of warmup phase. Entering ROI #2.
+***Instruction 30,159,645,054: Exiting ROI #2. Switching to fast-forward processor.
+switching cpus
+***Instruction 40,160,867,332: End of fast-forward phase. Switching to timing processor and entering warmup phase.
+switching cpus
+***Instruction 40,187,552,217: End of warmup phase. Entering ROI #3.
+***Instruction 40,239,415,360: Exiting ROI #3. Switching to fast-forward processor.
+switching cpus
+***Instruction 40,239,415,360: Maximum number of ROIs reached, ending simulation.
+***Instruction 40,239,415,361, tick 23,028,077,021,946: Exiting because a thread reached the max instruction count.
+***Total wall clock time: 32.85 min

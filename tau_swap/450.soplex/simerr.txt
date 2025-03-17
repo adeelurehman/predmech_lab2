@@ -1,0 +1,330 @@
+warn: Base 10 memory/cache size 32MB will be cast to base 2 size 32MiB.
+src/mem/dram_interface.cc:690: warn: DRAM device capacity (16384 Mbytes) does not match the address range assigned (2048 Mbytes)
+src/mem/dram_interface.cc:690: warn: DRAM device capacity (16384 Mbytes) does not match the address range assigned (2048 Mbytes)
+src/base/statistics.hh:279: warn: One of the stats is a legacy stat. Legacy stat is a stat that does not belong to any statistics::Group. Legacy stat is deprecated.
+board.remote_gdb: Listening for connections on port 7039
+src/cpu/kvm/base.cc:169: info: KVM: Coalesced MMIO disabled by config.
+src/cpu/kvm/base.cc:591: hack: Pretending totalOps is equivalent to totalInsts()
+src/sim/simulate.cc:199: info: Entering event queue @ 0.  Starting simulation...
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x3a) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0xd90) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x48) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x309) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x30a) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x30b) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x38d) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x38e) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x38f) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x390) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0xc1) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0xc2) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0xc3) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0xc4) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x186) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x187) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x188) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x189) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x12) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x11) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x4b564d01) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x4b564d00) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x40000000) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x40000001) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x40000020) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x40000021) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x40000022) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x40000023) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x40000100) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x40000101) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x40000102) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x40000103) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x40000104) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x40000105) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x40000003) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x40000002) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x40000010) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x40000080) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x400000b0) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x40000073) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x40000106) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x40000107) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x40000108) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x400000ff) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x400000f1) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x400000f2) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x400000f3) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x400000f4) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x400000f5) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x4b564d02) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x4b564d03) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x4b564d04) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x4b564d06) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x4b564d07) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x3b) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x6e0) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x10a) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x345) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x1a0) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x4d0) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x9e) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x34) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0xce) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x140) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x1fc) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x8b) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x480) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x48d) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x48e) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x48f) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x490) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x485) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x486) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x488) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x48a) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x48b) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x48c) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x491) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0xc0010015) unsupported by gem5. Skipping.
+src/arch/x86/kvm/x86_cpu.cc:1688: warn: kvm-x86: MSR (0x4b564d05) unsupported by gem5. Skipping.
+src/sim/mem_state.cc:448: info: Increasing stack size by one page.
+src/sim/syscall_emul.cc:86: warn: ignoring syscall mprotect(...)
+src/sim/syscall_emul.cc:86: warn: ignoring syscall mprotect(...)
+src/sim/syscall_emul.cc:86: warn: ignoring syscall mprotect(...)
+src/sim/syscall_emul.cc:86: warn: ignoring syscall mprotect(...)
+src/sim/syscall_emul.cc:86: warn: ignoring syscall mprotect(...)
+src/sim/syscall_emul.cc:86: warn: ignoring syscall mprotect(...)
+src/sim/syscall_emul.cc:86: warn: ignoring syscall mprotect(...)
+src/sim/mem_state.cc:448: info: Increasing stack size by one page.
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff77f9000-0x7ffff7828000, adding 28672
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff77f9000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff77c0000-0x7ffff77f9000, adding 40960
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff77c0000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff7751000-0x7ffff778b000, adding 20480
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff7751000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff770d000-0x7ffff7751000, adding 45056
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff770d000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff76cd000-0x7ffff770d000, adding 24576
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff76cd000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff7687000-0x7ffff76cd000, adding 24576
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff7687000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff7635000-0x7ffff7687000, adding 57344
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff7635000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff75e8000-0x7ffff7635000, adding 28672
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff75e8000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff7593000-0x7ffff75e8000, adding 32768
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff7593000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff7535000-0x7ffff7593000, adding 221184
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff7535000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff74d3000-0x7ffff7535000, adding 65536
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff74d3000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff7476000-0x7ffff74d3000, adding 32768
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff7476000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff740f000-0x7ffff7476000, adding 40960
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff740f000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff739a000-0x7ffff740f000, adding 77824
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff739a000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff7329000-0x7ffff739a000, adding 40960
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff7329000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff72ac000-0x7ffff7329000, adding 49152
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff72ac000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff7220000-0x7ffff72ac000, adding 94208
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff7220000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff7197000-0x7ffff7220000, adding 49152
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff7197000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff7100000-0x7ffff7197000, adding 57344
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff7100000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff7058000-0x7ffff7100000, adding 114688
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff7058000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff6fb2000-0x7ffff7058000, adding 61440
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff6fb2000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff6e98000-0x7ffff6f54000, adding 385024
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff6e98000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff6de2000-0x7ffff6e98000, adding 65536
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff6de2000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff6d18000-0x7ffff6de2000, adding 139264
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff6d18000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff6c4f000-0x7ffff6d18000, adding 77824
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff6c4f000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff6b72000-0x7ffff6c4f000, adding 81920
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff6b72000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff6a80000-0x7ffff6b72000, adding 163840
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff6a80000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff698d000-0x7ffff6a80000, adding 90112
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff698d000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff686a000-0x7ffff698d000, adding 200704
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff686a000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff675f000-0x7ffff686a000, adding 98304
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff675f000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff6639000-0x7ffff675f000, adding 110592
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff6639000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff64dc000-0x7ffff6639000, adding 237568
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff64dc000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff6399000-0x7ffff64dc000, adding 118784
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff6399000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff6165000-0x7ffff62dd000, adding 770048
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff6165000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff6001000-0x7ffff6165000, adding 135168
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff6001000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff5e5f000-0x7ffff6001000, adding 282624
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff5e5f000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff5cd8000-0x7ffff5e5f000, adding 143360
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff5cd8000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff5b2a000-0x7ffff5cd8000, adding 159744
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff5b2a000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff5934000-0x7ffff5b2a000, adding 344064
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff5934000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff575b000-0x7ffff5934000, adding 176128
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff575b000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff5552000-0x7ffff575b000, adding 196608
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff5552000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff52f8000-0x7ffff5552000, adding 409600
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff52f8000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff50bb000-0x7ffff52f8000, adding 212992
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff50bb000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff4e45000-0x7ffff50bb000, adding 233472
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff4e45000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff4b72000-0x7ffff4e45000, adding 495616
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff4b72000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff470b000-0x7ffff49fa000, adding 1536000
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff470b000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff4456000-0x7ffff470b000, adding 258048
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff4456000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff40cc000-0x7ffff412a000, adding 221184
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff40cc000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff4075000-0x7ffff40cc000, adding 32768
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff4075000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff4016000-0x7ffff4075000, adding 32768
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff4016000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff3fad000-0x7ffff4016000, adding 40960
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff3fad000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff3f3a000-0x7ffff3fad000, adding 40960
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff3f3a000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff3ebb000-0x7ffff3f3a000, adding 49152
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff3ebb000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff3ce6000-0x7ffff3ebb000, adding 319488
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff3ce6000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff3c5b000-0x7ffff3ce6000, adding 49152
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff3c5b000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff3bc2000-0x7ffff3c5b000, adding 57344
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff3bc2000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff398f000-0x7ffff3bc2000, adding 385024
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff398f000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff38e6000-0x7ffff398f000, adding 65536
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff38e6000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff382a000-0x7ffff38e6000, adding 385024
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff382a000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff3770000-0x7ffff382a000, adding 69632
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff3770000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff34cc000-0x7ffff3770000, adding 462848
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff34cc000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff3400000-0x7ffff34cc000, adding 73728
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff3400000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff331f000-0x7ffff3400000, adding 86016
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff331f000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff2ff4000-0x7ffff331f000, adding 552960
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff2ff4000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff2efd000-0x7ffff2ff4000, adding 90112
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff2efd000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff2ded000-0x7ffff2efd000, adding 102400
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff2ded000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff2a20000-0x7ffff2ded000, adding 663552
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff2a20000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff28f5000-0x7ffff2a20000, adding 110592
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff28f5000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff27ac000-0x7ffff28f5000, adding 122880
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff27ac000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff231d000-0x7ffff27ac000, adding 794624
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff231d000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff21a5000-0x7ffff231d000, adding 770048
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff21a5000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff203b000-0x7ffff21a5000, adding 135168
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff203b000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff1ead000-0x7ffff203b000, adding 147456
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff1ead000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff1935000-0x7ffff1ead000, adding 954368
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff1935000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff177f000-0x7ffff1935000, adding 163840
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff177f000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff159d000-0x7ffff177f000, adding 180224
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff159d000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff0f0d000-0x7ffff159d000, adding 1146880
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff0f0d000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff0cfb000-0x7ffff0f0d000, adding 196608
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff0cfb000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff051b000-0x7ffff0cfb000, adding 1376256
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff051b000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff02d4000-0x7ffff051b000, adding 217088
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff02d4000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7ffff0053000-0x7ffff02d4000, adding 237568
+src/sim/syscall_emul.hh:1436: warn: returning 0x7ffff0053000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7fffefd64000-0x7ffff0053000, adding 1536000
+src/sim/syscall_emul.hh:1436: warn: returning 0x7fffefd64000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7fffef3f1000-0x7fffefd64000, adding 1650688
+src/sim/syscall_emul.hh:1436: warn: returning 0x7fffef3f1000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7fffef130000-0x7fffef3f1000, adding 262144
+src/sim/syscall_emul.hh:1436: warn: returning 0x7fffef130000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7fffeee28000-0x7fffef130000, adding 290816
+src/sim/syscall_emul.hh:1436: warn: returning 0x7fffeee28000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7fffee2d1000-0x7fffeee28000, adding 1982464
+src/sim/syscall_emul.hh:1436: warn: returning 0x7fffee2d1000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7fffedf7b000-0x7fffee2d1000, adding 319488
+src/sim/syscall_emul.hh:1436: warn: returning 0x7fffedf7b000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7fffedbd0000-0x7fffedf7b000, adding 348160
+src/sim/syscall_emul.hh:1436: warn: returning 0x7fffedbd0000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7fffece35000-0x7fffedbd0000, adding 2375680
+src/sim/syscall_emul.hh:1436: warn: returning 0x7fffece35000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7fffeca2c000-0x7fffece35000, adding 385024
+src/sim/syscall_emul.hh:1436: warn: returning 0x7fffeca2c000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7fffec5bc000-0x7fffeca2c000, adding 421888
+src/sim/syscall_emul.hh:1436: warn: returning 0x7fffec5bc000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7fffeb568000-0x7fffec5bc000, adding 2854912
+src/sim/syscall_emul.hh:1436: warn: returning 0x7fffeb568000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7fffeb086000-0x7fffeb568000, adding 466944
+src/sim/syscall_emul.hh:1436: warn: returning 0x7fffeb086000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7fffeab27000-0x7fffeb086000, adding 512000
+src/sim/syscall_emul.hh:1436: warn: returning 0x7fffeab27000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7fffea25a000-0x7fffea838000, adding 3076096
+src/sim/syscall_emul.hh:1436: warn: returning 0x7fffea25a000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7fffe8ec2000-0x7fffea25a000, adding 3424256
+src/sim/syscall_emul.hh:1436: warn: returning 0x7fffe8ec2000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7fffe88da000-0x7fffe8ec2000, adding 561152
+src/sim/syscall_emul.hh:1436: warn: returning 0x7fffe88da000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7fffe825b000-0x7fffe88da000, adding 618496
+src/sim/syscall_emul.hh:1436: warn: returning 0x7fffe825b000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7fffe6ad8000-0x7fffe825b000, adding 4108288
+src/sim/syscall_emul.hh:1436: warn: returning 0x7fffe6ad8000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7fffe63b2000-0x7fffe6ad8000, adding 684032
+src/sim/syscall_emul.hh:1436: warn: returning 0x7fffe63b2000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7fffe5bd5000-0x7fffe63b2000, adding 749568
+src/sim/syscall_emul.hh:1436: warn: returning 0x7fffe5bd5000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7fffe3f9e000-0x7fffe5bd5000, adding 4931584
+src/sim/syscall_emul.hh:1436: warn: returning 0x7fffe3f9e000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7fffe36f8000-0x7fffe3f9e000, adding 823296
+src/sim/syscall_emul.hh:1436: warn: returning 0x7fffe36f8000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7fffe2e0a000-0x7fffe36f8000, adding 6402048
+src/sim/syscall_emul.hh:1436: warn: returning 0x7fffe2e0a000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7fffe2353000-0x7fffe2e0a000, adding 1871872
+src/sim/syscall_emul.hh:1436: warn: returning 0x7fffe2353000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7fffe125c000-0x7fffe1f38000, adding 2248704
+src/sim/syscall_emul.hh:1436: warn: returning 0x7fffe125c000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7fffe02ee000-0x7fffe125c000, adding 2695168
+src/sim/syscall_emul.hh:1436: warn: returning 0x7fffe02ee000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7fffdf06a000-0x7fffe02ee000, adding 3235840
+src/sim/syscall_emul.hh:1436: warn: returning 0x7fffdf06a000 as start
+src/sim/syscall_emul.hh:1417: warn: mremapping to new vaddr 0x7fffdda32000-0x7fffdf06a000, adding 3883008
+src/sim/syscall_emul.hh:1436: warn: returning 0x7fffdda32000 as start
+src/sim/simulate.cc:199: info: Entering event queue @ 5767000000250.  Starting simulation...
+src/sim/power_state.cc:118: warn: PowerState: More than one power state change request encountered within the same simulation tick
+src/sim/power_state.cc:105: warn: PowerState: Already in the requested power state, request ignored
+src/sim/simulate.cc:199: info: Entering event queue @ 10612000000500.  Starting simulation...
+src/sim/simulate.cc:199: info: Entering event queue @ 10624656588000.  Starting simulation...
+src/sim/simulate.cc:199: info: Entering event queue @ 10647731001750.  Starting simulation...
+src/sim/simulate.cc:199: info: Entering event queue @ 10648731186682.  Starting simulation...
+src/sim/simulate.cc:199: info: Entering event queue @ 17035731186750.  Starting simulation...
+src/sim/simulate.cc:199: info: Entering event queue @ 17049181843250.  Starting simulation...
+src/sim/simulate.cc:199: info: Entering event queue @ 17073682740000.  Starting simulation...
+src/sim/simulate.cc:199: info: Entering event queue @ 17074683417636.  Starting simulation...
+src/sim/simulate.cc:199: info: Entering event queue @ 22984683417750.  Starting simulation...
+src/sim/simulate.cc:199: info: Entering event queue @ 22999252837000.  Starting simulation...
+src/arch/generic/debugfaults.hh:145: warn: MOVNTDQ: Ignoring non-temporal hint, modeling as cacheable!
+src/sim/simulate.cc:199: info: Entering event queue @ 23027076641250.  Starting simulation...
