@@ -3,9 +3,9 @@ gem5 is copyrighted software; use the --copyright option for details.
 
 gem5 version 24.1.0.2
 gem5 compiled Mar 14 2025 05:14:19
-gem5 started Mar 14 2025 06:36:24
-gem5 executing on pedagogical-1, pid 3415073
-command line: /tmp/arehman/Gem5_p2/gem5-configs-395t/../build/X86/gem5.opt --outdir=/tmp/arehman/Gem5_p2/0636/471.omnetpp -re -- /tmp/arehman/Gem5_p2/gem5-configs-395t/se_custom_binary_periodic.py --input-bin=/tmp/arehman/Gem5_p2/spec06/471.omnetpp/omnetpp_base.amd64-m64-gcc42-nn --input-args=/tmp/arehman/Gem5_p2/spec06/471.omnetpp/omnetpp.ini --ff-interval=10000 --warmup-interval=25 --roi-interval=50 --init-ff-interval=10000 --num-rois=3
+gem5 started Mar 16 2025 18:49:32
+gem5 executing on pedagogical-1, pid 140998
+command line: /tmp/arehman/Gem5_p2/gem5-configs-395t/../build/X86/gem5.opt --outdir=/tmp/arehman/Gem5_p2/1849/471.omnetpp -re -- /tmp/arehman/Gem5_p2/gem5-configs-395t/se_custom_binary_periodic.py --input-bin=/tmp/arehman/Gem5_p2/spec06/471.omnetpp/omnetpp_base.amd64-m64-gcc42-nn --input-args=/tmp/arehman/Gem5_p2/spec06/471.omnetpp/omnetpp.ini --ff-interval=10000 --warmup-interval=25 --roi-interval=50 --init-ff-interval=10000 --num-rois=3
 
 Creating SkylakeCPU object: bpred=SkylakeTAGE
 Creating X86 Switchable Processor: num_cores=1, start_core_type=CPUTypes.KVM, switch_core_type=CPUTypes.TIMING
@@ -2216,7 +2216,7 @@ aging time: 120
 high watermark: 524288
 pause time: 300
 
-***Instruction 10,001,605,720: End of initial fast-forward phase.
+***Instruction 10,001,832,387: End of initial fast-forward phase.
 largeNet.mlanBB[65].host[0].srv registering DSAP 241
 largeNet.mlanBB[65].host[1].srv registering DSAP 241
 largeNet.mlanBB[65].host[2].srv registering DSAP 241
@@ -11473,9 +11473,9 @@ largeNet.llanBB[15].host[10].cli registering DSAP 240
 largeNet.llanBB[15].host[11].cli registering DSAP 240
 largeNet.llanBB[15].hhost[0].cli registering DSAP 240
 largeNet.llanBB[15].hhost[1].cli registering DSAP 240
-largeNet.llanBB[15].hhost[2].cli registering DSAP 240
-***Instruction 20,002,011,626: End of fast-forward phase. Switching to timing processor and entering warmup phase.
+***Instruction 20,001,832,440: End of fast-forward phase. Switching to timing processor and entering warmup phase.
 switching cpus
+largeNet.llanBB[15].hhost[2].cli registering DSAP 240
 largeNet.llanBB[15].hhost[3].cli registering DSAP 240
 largeNet.llanBB[15].hhost[4].cli registering DSAP 240
 largeNet.llanBB[15].bhost[0].cli registering DSAP 240
@@ -11499,7 +11499,7 @@ largeNet.llanBB[16].host[10].cli registering DSAP 240
 largeNet.llanBB[16].host[11].cli registering DSAP 240
 largeNet.llanBB[16].hhost[0].cli registering DSAP 240
 largeNet.llanBB[16].hhost[1].cli registering DSAP 240
-***Instruction 20,030,754,870: End of warmup phase. Entering ROI #1.
+***Instruction 20,030,566,481: End of warmup phase. Entering ROI #1.
 largeNet.llanBB[16].hhost[2].cli registering DSAP 240
 largeNet.llanBB[16].hhost[3].cli registering DSAP 240
 largeNet.llanBB[16].hhost[4].cli registering DSAP 240
@@ -11545,7 +11545,7 @@ largeNet.llanBB[18].host[7].cli registering DSAP 240
 largeNet.llanBB[18].host[8].cli registering DSAP 240
 largeNet.llanBB[18].host[9].cli registering DSAP 240
 largeNet.llanBB[18].host[10].cli registering DSAP 240
-***Instruction 20,084,499,473: Exiting ROI #1. Switching to fast-forward processor.
+***Instruction 20,084,311,349: Exiting ROI #1. Switching to fast-forward processor.
 switching cpus
 largeNet.llanBB[18].host[11].cli registering DSAP 240
 largeNet.llanBB[18].hhost[0].cli registering DSAP 240
@@ -13746,18 +13746,18 @@ largeNet.llanD[2].bhost[5].cli registering DSAP 240
 largeNet.llanD[2].bhost[6].cli registering DSAP 240
 ** Event #0   T=0.0000000  ( 0.00s)
      Messages:  created: 77472
-***Instruction 30,085,038,180: End of fast-forward phase. Switching to timing processor and entering warmup phase.
+***Instruction 30,085,102,903: End of fast-forward phase. Switching to timing processor and entering warmup phase.
 switching cpus
-***Instruction 30,111,383,339: End of warmup phase. Entering ROI #2.
-***Instruction 30,162,815,055: Exiting ROI #2. Switching to fast-forward processor.
+***Instruction 30,111,463,081: End of warmup phase. Entering ROI #2.
+***Instruction 30,162,887,071: Exiting ROI #2. Switching to fast-forward processor.
 switching cpus
 ** Event #5000000   T=0.0868274600 ( 86ms)
      Messages:  created: 3949482
-***Instruction 40,163,774,954: End of fast-forward phase. Switching to timing processor and entering warmup phase.
+***Instruction 40,163,747,665: End of fast-forward phase. Switching to timing processor and entering warmup phase.
 switching cpus
-***Instruction 40,190,630,165: End of warmup phase. Entering ROI #3.
-***Instruction 40,242,066,629: Exiting ROI #3. Switching to fast-forward processor.
+***Instruction 40,190,610,851: End of warmup phase. Entering ROI #3.
+***Instruction 40,242,050,546: Exiting ROI #3. Switching to fast-forward processor.
 switching cpus
-***Instruction 40,242,066,629: Maximum number of ROIs reached, ending simulation.
-***Instruction 40,242,066,630, tick 26,956,144,874,590: Exiting because a thread reached the max instruction count.
-***Total wall clock time: 32.88 min
+***Instruction 40,242,050,546: Maximum number of ROIs reached, ending simulation.
+***Instruction 40,242,050,547, tick 40,568,307,909,008: Exiting because a thread reached the max instruction count.
+***Total wall clock time: 38.70 min

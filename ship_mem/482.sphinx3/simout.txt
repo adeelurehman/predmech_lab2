@@ -3,9 +3,9 @@ gem5 is copyrighted software; use the --copyright option for details.
 
 gem5 version 24.1.0.2
 gem5 compiled Mar 14 2025 05:14:19
-gem5 started Mar 14 2025 06:36:24
-gem5 executing on pedagogical-1, pid 3415077
-command line: /tmp/arehman/Gem5_p2/gem5-configs-395t/../build/X86/gem5.opt --outdir=/tmp/arehman/Gem5_p2/0636/482.sphinx3 -re -- /tmp/arehman/Gem5_p2/gem5-configs-395t/se_custom_binary_periodic.py --input-bin=/tmp/arehman/Gem5_p2/spec06/482.sphinx3/sphinx_livepretend_base.amd64-m64-gcc42-nn '--input-args=/tmp/arehman/Gem5_p2/spec06/482.sphinx3/ctlfile . /tmp/arehman/Gem5_p2/spec06/482.sphinx3/args.an4' --ff-interval=10000 --warmup-interval=25 --roi-interval=50 --init-ff-interval=10000 --num-rois=3
+gem5 started Mar 16 2025 18:49:31
+gem5 executing on pedagogical-1, pid 140999
+command line: /tmp/arehman/Gem5_p2/gem5-configs-395t/../build/X86/gem5.opt --outdir=/tmp/arehman/Gem5_p2/1849/482.sphinx3 -re -- /tmp/arehman/Gem5_p2/gem5-configs-395t/se_custom_binary_periodic.py --input-bin=/tmp/arehman/Gem5_p2/spec06/482.sphinx3/sphinx_livepretend_base.amd64-m64-gcc42-nn '--input-args=/tmp/arehman/Gem5_p2/spec06/482.sphinx3/ctlfile . /tmp/arehman/Gem5_p2/spec06/482.sphinx3/args.an4' --ff-interval=10000 --warmup-interval=25 --roi-interval=50 --init-ff-interval=10000 --num-rois=3
 
 Creating SkylakeCPU object: bpred=SkylakeTAGE
 Creating X86 Switchable Processor: num_cores=1, start_core_type=CPUTypes.KVM, switch_core_type=CPUTypes.TIMING
@@ -273,7 +273,7 @@ INFO: utt.c(337):  251 frm;  1537 sen, 11129 gau/fr, Sen 0.00 CPU 0.00 Clk [Ovrh
 INFO: utt.c(375): HMMHist[0..0](an393-mjwl-b): 16(6)
 INFO: lm.c(823):         0 tg(),         0 tgcache,        0 bo;     0 fills,        0 in mem (0.0%)
 INFO: lm.c(826):   142768 bg(),   142765 bo;     0 fills,        1 in mem (50.0%)
-***Instruction 10,003,948,720: End of initial fast-forward phase.
+***Instruction 10,000,000,061: End of initial fast-forward phase.
 
 Backtrace(an394-mjwl-b)
  LatID  SFrm  EFrm        AScr     LScr Type
@@ -372,10 +372,10 @@ INFO: utt.c(337):  281 frm;  1402 sen,  9942 gau/fr, Sen 0.00 CPU 0.00 Clk [Ovrh
 INFO: utt.c(375): HMMHist[0..0](an397-miry-b): 8(2)
 INFO: lm.c(823):         0 tg(),         0 tgcache,        0 bo;     0 fills,        0 in mem (0.0%)
 INFO: lm.c(826):    22881 bg(),    22878 bo;     0 fills,        1 in mem (50.0%)
-***Instruction 20,008,221,410: End of fast-forward phase. Switching to timing processor and entering warmup phase.
+***Instruction 20,000,436,834: End of fast-forward phase. Switching to timing processor and entering warmup phase.
 switching cpus
-***Instruction 20,036,442,138: End of warmup phase. Entering ROI #1.
-***Instruction 20,089,607,616: Exiting ROI #1. Switching to fast-forward processor.
+***Instruction 20,028,682,374: End of warmup phase. Entering ROI #1.
+***Instruction 20,081,586,195: Exiting ROI #1. Switching to fast-forward processor.
 switching cpus
 
 Backtrace(an398-miry-b)
@@ -496,10 +496,10 @@ INFO: utt.c(337):   81 frm;  1517 sen, 11151 gau/fr, Sen 0.00 CPU 0.00 Clk [Ovrh
 INFO: utt.c(375): HMMHist[0..0](an402-mdms2-b): 8(9)
 INFO: lm.c(823):         0 tg(),         0 tgcache,        0 bo;     0 fills,        0 in mem (0.0%)
 INFO: lm.c(826):     5649 bg(),     5645 bo;     0 fills,        1 in mem (50.0%)
-***Instruction 30,089,607,669: End of fast-forward phase. Switching to timing processor and entering warmup phase.
+***Instruction 30,084,991,431: End of fast-forward phase. Switching to timing processor and entering warmup phase.
 switching cpus
-***Instruction 30,117,229,947: End of warmup phase. Entering ROI #2.
-***Instruction 30,170,277,298: Exiting ROI #2. Switching to fast-forward processor.
+***Instruction 30,112,991,101: End of warmup phase. Entering ROI #2.
+***Instruction 30,166,275,188: Exiting ROI #2. Switching to fast-forward processor.
 switching cpus
 
 Backtrace(an403-mdms2-b)
@@ -580,9 +580,9 @@ INFO: utt.c(337):  541 frm;  1282 sen,  9261 gau/fr, Sen 0.00 CPU 0.00 Clk [Ovrh
 INFO: utt.c(375): HMMHist[0..0](an405-mdms2-b): 6(1)
 INFO: lm.c(823):         0 tg(),         0 tgcache,        0 bo;     0 fills,        0 in mem (0.0%)
 INFO: lm.c(826):    41160 bg(),    41156 bo;     0 fills,        1 in mem (50.0%)
-***Instruction 40,173,232,271: End of fast-forward phase. Switching to timing processor and entering warmup phase.
+***Instruction 40,166,275,232: End of fast-forward phase. Switching to timing processor and entering warmup phase.
 switching cpus
-***Instruction 40,201,526,910: End of warmup phase. Entering ROI #3.
+***Instruction 40,194,431,572: End of warmup phase. Entering ROI #3.
 
 Backtrace(an416-fjlp-b)
  LatID  SFrm  EFrm        AScr     LScr Type
@@ -600,8 +600,8 @@ INFO: utt.c(337):   81 frm;  1506 sen, 11554 gau/fr, Sen 0.00 CPU 0.00 Clk [Ovrh
 INFO: utt.c(375): HMMHist[0..0](an416-fjlp-b): 8(9)
 INFO: lm.c(823):         0 tg(),         0 tgcache,        0 bo;     0 fills,        0 in mem (0.0%)
 INFO: lm.c(826):     1416 bg(),     1413 bo;     0 fills,        1 in mem (50.0%)
-***Instruction 40,254,758,616: Exiting ROI #3. Switching to fast-forward processor.
+***Instruction 40,247,650,134: Exiting ROI #3. Switching to fast-forward processor.
 switching cpus
-***Instruction 40,254,758,616: Maximum number of ROIs reached, ending simulation.
-***Instruction 40,254,758,617, tick 6,791,415,445,776: Exiting because a thread reached the max instruction count.
-***Total wall clock time: 21.13 min
+***Instruction 40,247,650,134: Maximum number of ROIs reached, ending simulation.
+***Instruction 40,247,650,135, tick 9,251,554,578,426: Exiting because a thread reached the max instruction count.
+***Total wall clock time: 23.33 min

@@ -3,9 +3,9 @@ gem5 is copyrighted software; use the --copyright option for details.
 
 gem5 version 24.1.0.2
 gem5 compiled Mar 14 2025 05:14:19
-gem5 started Mar 14 2025 06:36:24
-gem5 executing on pedagogical-1, pid 3415078
-command line: /tmp/arehman/Gem5_p2/gem5-configs-395t/../build/X86/gem5.opt --outdir=/tmp/arehman/Gem5_p2/0636/450.soplex -re -- /tmp/arehman/Gem5_p2/gem5-configs-395t/se_custom_binary_periodic.py --input-bin=/tmp/arehman/Gem5_p2/spec06/450.soplex/soplex_base.amd64-m64-gcc42-nn '--input-args=-s1 -e -m45000 /tmp/arehman/Gem5_p2/spec06/450.soplex/pds-50.mps' --ff-interval=10000 --warmup-interval=25 --roi-interval=50 --init-ff-interval=10000 --num-rois=3
+gem5 started Mar 16 2025 18:49:31
+gem5 executing on pedagogical-1, pid 141003
+command line: /tmp/arehman/Gem5_p2/gem5-configs-395t/../build/X86/gem5.opt --outdir=/tmp/arehman/Gem5_p2/1849/450.soplex -re -- /tmp/arehman/Gem5_p2/gem5-configs-395t/se_custom_binary_periodic.py --input-bin=/tmp/arehman/Gem5_p2/spec06/450.soplex/soplex_base.amd64-m64-gcc42-nn '--input-args=-s1 -e -m45000 /tmp/arehman/Gem5_p2/spec06/450.soplex/pds-50.mps' --ff-interval=10000 --warmup-interval=25 --roi-interval=50 --init-ff-interval=10000 --num-rois=3
 
 Creating SkylakeCPU object: bpred=SkylakeTAGE
 Creating X86 Switchable Processor: num_cores=1, start_core_type=CPUTypes.KVM, switch_core_type=CPUTypes.TIMING
@@ -54,22 +54,22 @@ SPxAggregateSM:	removed 861 row(s) and column(s)
 SPxAggregateSM:	delta = -5.289000e+08
 removed 44150 rows
 removed 44280 columns
-***Instruction 10,001,775,395: End of initial fast-forward phase.
-***Instruction 20,001,775,410: End of fast-forward phase. Switching to timing processor and entering warmup phase.
+***Instruction 10,000,000,041: End of initial fast-forward phase.
+***Instruction 20,000,609,992: End of fast-forward phase. Switching to timing processor and entering warmup phase.
 switching cpus
-***Instruction 20,029,516,045: End of warmup phase. Entering ROI #1.
-***Instruction 20,081,299,503: Exiting ROI #1. Switching to fast-forward processor.
+***Instruction 20,028,337,665: End of warmup phase. Entering ROI #1.
+***Instruction 20,080,818,807: Exiting ROI #1. Switching to fast-forward processor.
 switching cpus
-***Instruction 30,081,567,571: End of fast-forward phase. Switching to timing processor and entering warmup phase.
+***Instruction 30,081,858,683: End of fast-forward phase. Switching to timing processor and entering warmup phase.
 switching cpus
-***Instruction 30,109,075,332: End of warmup phase. Entering ROI #2.
-***Instruction 30,160,970,364: Exiting ROI #2. Switching to fast-forward processor.
+***Instruction 30,109,458,811: End of warmup phase. Entering ROI #2.
+***Instruction 30,161,403,799: Exiting ROI #2. Switching to fast-forward processor.
 switching cpus
-***Instruction 40,163,153,598: End of fast-forward phase. Switching to timing processor and entering warmup phase.
+***Instruction 40,164,059,494: End of fast-forward phase. Switching to timing processor and entering warmup phase.
 switching cpus
-***Instruction 40,189,968,943: End of warmup phase. Entering ROI #3.
-***Instruction 40,242,588,197: Exiting ROI #3. Switching to fast-forward processor.
+***Instruction 40,191,498,111: End of warmup phase. Entering ROI #3.
+***Instruction 40,244,010,372: Exiting ROI #3. Switching to fast-forward processor.
 switching cpus
-***Instruction 40,242,588,197: Maximum number of ROIs reached, ending simulation.
-***Instruction 40,242,588,198, tick 15,594,023,014,108: Exiting because a thread reached the max instruction count.
-***Total wall clock time: 29.28 min
+***Instruction 40,244,010,372: Maximum number of ROIs reached, ending simulation.
+***Instruction 40,244,010,373, tick 21,803,624,002,486: Exiting because a thread reached the max instruction count.
+***Total wall clock time: 33.17 min

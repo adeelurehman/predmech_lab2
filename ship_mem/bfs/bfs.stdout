@@ -3,7 +3,7 @@ Global frequency set at 1000000000000 ticks per second
 src/mem/dram_interface.cc:690: warn: DRAM device capacity (16384 Mbytes) does not match the address range assigned (2048 Mbytes)
 src/mem/dram_interface.cc:690: warn: DRAM device capacity (16384 Mbytes) does not match the address range assigned (2048 Mbytes)
 src/base/statistics.hh:279: warn: One of the stats is a legacy stat. Legacy stat is a stat that does not belong to any statistics::Group. Legacy stat is deprecated.
-board.remote_gdb: Listening for connections on port 7021
+board.remote_gdb: Listening for connections on port 7032
 src/cpu/kvm/base.cc:169: info: KVM: Coalesced MMIO disabled by config.
 src/cpu/kvm/base.cc:591: hack: Pretending totalOps is equivalent to totalInsts()
 gem5 Simulator System.  https://www.gem5.org
@@ -11,9 +11,9 @@ gem5 is copyrighted software; use the --copyright option for details.
 
 gem5 version 24.1.0.2
 gem5 compiled Mar 14 2025 05:14:19
-gem5 started Mar 14 2025 06:36:24
-gem5 executing on pedagogical-1, pid 3415068
-command line: /tmp/arehman/Gem5_p2/build/X86/gem5.opt -- /tmp/arehman/Gem5_p2/gem5-configs-395t/se_custom_binary_periodic.py --input-bin /tmp/arehman/Gem5_p2/spec06/cc --input-args '-r 1 -f /scratch/cluster/speedway/cs395t/hw2/part2/gap/g22.el' --init-ff-interval 10000 --ff-interval 10000 --warmup-interval 25 --roi-interval 50 --num-rois 3
+gem5 started Mar 16 2025 18:49:31
+gem5 executing on pedagogical-1, pid 140977
+command line: /tmp/arehman/Gem5_p2/build/X86/gem5.opt --outdir=/tmp/arehman/Gem5_p2/1849/bfs -- /tmp/arehman/Gem5_p2/gem5-configs-395t/se_custom_binary_periodic.py --input-bin /tmp/arehman/Gem5_p2/spec06/bfs --input-args '-r 1 -f /scratch/cluster/speedway/cs395t/hw2/part2/gap/g22.el' --init-ff-interval 10000 --ff-interval 10000 --warmup-interval 25 --roi-interval 50 --num-rois 3
 
 Creating SkylakeCPU object: bpred=SkylakeTAGE
 Creating X86 Switchable Processor: num_cores=1, start_core_type=CPUTypes.KVM, switch_core_type=CPUTypes.TIMING
@@ -120,36 +120,39 @@ src/sim/syscall_emul.cc:86: warn: ignoring syscall mprotect(...)
 src/sim/syscall_emul.cc:86: warn: ignoring syscall mprotect(...)
 src/sim/syscall_emul.cc:86: warn: ignoring syscall mprotect(...)
 src/sim/syscall_emul.cc:86: warn: ignoring syscall mprotect(...)
-***Instruction 10,003,046,528: End of initial fast-forward phase.
-src/sim/simulate.cc:199: info: Entering event queue @ 3027304434250.  Starting simulation...
+src/sim/mem_state.cc:448: info: Increasing stack size by one page.
+***Instruction 10,004,314,041: End of initial fast-forward phase.
+src/sim/simulate.cc:199: info: Entering event queue @ 3173909052500.  Starting simulation...
 src/sim/power_state.cc:118: warn: PowerState: More than one power state change request encountered within the same simulation tick
 src/sim/power_state.cc:105: warn: PowerState: Already in the requested power state, request ignored
-***Instruction 20,007,776,688: End of fast-forward phase. Switching to timing processor and entering warmup phase.
+***Instruction 20,008,027,702: End of fast-forward phase. Switching to timing processor and entering warmup phase.
 switching cpus
-src/sim/simulate.cc:199: info: Entering event queue @ 5899663385750.  Starting simulation...
-***Instruction 20,035,567,071: End of warmup phase. Entering ROI #1.
-src/sim/simulate.cc:199: info: Entering event queue @ 5909624858250.  Starting simulation...
-src/sim/simulate.cc:199: info: Entering event queue @ 5928538016000.  Starting simulation...
-***Instruction 20,088,358,606: Exiting ROI #1. Switching to fast-forward processor.
+src/sim/simulate.cc:199: info: Entering event queue @ 6131877734250.  Starting simulation...
+***Instruction 20,035,780,813: End of warmup phase. Entering ROI #1.
+src/sim/simulate.cc:199: info: Entering event queue @ 6141964078250.  Starting simulation...
+src/sim/simulate.cc:199: info: Entering event queue @ 6161125991750.  Starting simulation...
+src/sim/simulate.cc:199: info: Entering event queue @ 6162125994500.  Starting simulation...
+***Instruction 20,088,533,998: Exiting ROI #1. Switching to fast-forward processor.
 switching cpus
-src/sim/simulate.cc:199: info: Entering event queue @ 5929538019250.  Starting simulation...
-***Instruction 30,089,886,367: End of fast-forward phase. Switching to timing processor and entering warmup phase.
+src/sim/simulate.cc:199: info: Entering event queue @ 6163126072650.  Starting simulation...
+src/sim/simulate.cc:199: info: Entering event queue @ 9383424006750.  Starting simulation...
+***Instruction 30,093,236,026: End of fast-forward phase. Switching to timing processor and entering warmup phase.
 switching cpus
-src/sim/simulate.cc:199: info: Entering event queue @ 9243336055750.  Starting simulation...
-***Instruction 30,117,676,853: End of warmup phase. Entering ROI #2.
-src/sim/simulate.cc:199: info: Entering event queue @ 9253296115250.  Starting simulation...
-src/sim/simulate.cc:199: info: Entering event queue @ 9272208675000.  Starting simulation...
-***Instruction 30,170,468,153: Exiting ROI #2. Switching to fast-forward processor.
+src/sim/simulate.cc:199: info: Entering event queue @ 9384443261000.  Starting simulation...
+***Instruction 30,120,986,975: End of warmup phase. Entering ROI #2.
+src/sim/simulate.cc:199: info: Entering event queue @ 9394530200750.  Starting simulation...
+src/sim/simulate.cc:199: info: Entering event queue @ 9413689627000.  Starting simulation...
+***Instruction 30,173,740,172: Exiting ROI #2. Switching to fast-forward processor.
 switching cpus
-src/sim/simulate.cc:199: info: Entering event queue @ 9273208678000.  Starting simulation...
-***Instruction 40,175,067,744: End of fast-forward phase. Switching to timing processor and entering warmup phase.
+src/sim/simulate.cc:199: info: Entering event queue @ 9414689629750.  Starting simulation...
+***Instruction 40,178,451,180: End of fast-forward phase. Switching to timing processor and entering warmup phase.
 switching cpus
-src/sim/simulate.cc:199: info: Entering event queue @ 11674106155500.  Starting simulation...
-***Instruction 40,202,859,323: End of warmup phase. Entering ROI #3.
-src/sim/simulate.cc:199: info: Entering event queue @ 11684066573250.  Starting simulation...
-src/sim/simulate.cc:199: info: Entering event queue @ 11702980351750.  Starting simulation...
-***Instruction 40,255,650,637: Exiting ROI #3. Switching to fast-forward processor.
+src/sim/simulate.cc:199: info: Entering event queue @ 11777889585750.  Starting simulation...
+***Instruction 40,206,204,374: End of warmup phase. Entering ROI #3.
+src/sim/simulate.cc:199: info: Entering event queue @ 11787974693750.  Starting simulation...
+src/sim/simulate.cc:199: info: Entering event queue @ 11807136107000.  Starting simulation...
+***Instruction 40,258,958,141: Exiting ROI #3. Switching to fast-forward processor.
 switching cpus
-***Instruction 40,255,650,637: Maximum number of ROIs reached, ending simulation.
-***Instruction 40,255,650,638, tick 11,703,980,354,750: Exiting because a thread reached the max instruction count.
-***Total wall clock time: 24.10 min
+***Instruction 40,258,958,141: Maximum number of ROIs reached, ending simulation.
+***Instruction 40,258,958,142, tick 11,808,136,109,500: Exiting because a thread reached the max instruction count.
+***Total wall clock time: 27.65 min
